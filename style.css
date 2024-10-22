@@ -1,0 +1,150 @@
+
+/* This is for the main image on the website */
+.image img { 
+    width: 125px;
+    height: 125px;
+    padding: 1%;
+    border-radius: 50%; /* This is here so that the picture is a circle */
+    display: block;
+    margin: 0 auto; 
+}
+
+/* This is for the main text on the website */
+.title-text p{
+    margin-top: -15px; /* This is the space between the main image and the main text */
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 0 0 10px #fff, 
+                0 0 20px #fff, 
+                0 0 30px #fff, 
+                0 0 40px #fff, 
+                0 0 50px #fff, 
+                0 0 60px #fff, 
+                0 0 70px #fff;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center; /* This will ensure that the text is centered */
+}
+
+/* This is the background of the slideshow */
+.slideshow-background {
+    background-color: black;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; /* Align content to the top of the box */
+    margin: auto; /* Center the box so that it is in the middle of the website */
+    padding-top: 30px; /* Add some padding to space the title from the top of the box */
+    border-radius: 3%;
+    border: 5px solid white;
+}
+
+/* This is for the title of slide one */
+.slideshow-background p.slide-one-title {
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0; /* Reset margin so that it doesn't cause errors */
+    margin-bottom: 30px; /* Add space between the title and the buttons */
+}
+
+/* This is for the buttons inside slide one */
+.buttons-slide-one {
+    display: grid;
+    row-gap: 20px; /* Space between buttons */
+    grid-template-columns: repeat(1, 1fr);
+    width: 400px; /* This is the width for the buttons */
+    justify-items: center;
+}
+
+/* Button base styles */
+.buttons-slide-one button {
+    padding: 20px 100px;
+    width: 400px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* This is for the title of slide two */
+.slideshow-background p.slide-two {
+    padding: 20px 20px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0; /* Reset margin so that it doesn't cause errors */
+    margin-bottom: 30px; /* Add space between the title and the buttons */
+}
+
+/* This is for the title of slide one */
+.slideshow-background p.slide-three-info {
+    padding: 5px 20px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0; /* Reset margin so that it doesn't cause errors */
+    margin-bottom: 30px; /* Add space between the title and the buttons */
+}
+
+/* Customize each button's default and hover state */
+
+/* YouTube button */
+.youtube {
+    background-color: rgb(255, 0, 0);
+}
+.youtube:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+/* YouTube Music button */
+.youtube-music {
+    background-color: rgb(255, 0, 0);
+}
+.youtube-music:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+/* Spotify button */
+.spotify {
+    background-color: rgb(0, 255, 38);
+}
+.spotify:hover {
+    background-color: rgb(0, 255, 38);
+}
+
+/* Instagram button */
+.instagram {
+    background-color: rgb(255, 0, 187);
+}
+.instagram:hover {
+    background-color: rgb(255, 0, 187);
+}
+
+/* Apple Music button */
+.apple-music {
+    background-color: rgb(255, 0, 81);
+}
+.apple-music:hover {
+    background-color: rgb(255, 0, 81);
+}
+
+/* Amazon button */
+.amazon {
+    background-color: rgb(0, 30, 255);
+}
+.amazon:hover {
+    background-color: rgb(0, 30, 255);
+}
