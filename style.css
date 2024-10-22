@@ -99,6 +99,21 @@
     margin-bottom: 30px; /* Add space between the title and the buttons */
 }
 
+#clock {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 7px;
+    border-radius: 8px;
+    border: none;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
 /* Customize each button's default and hover state */
 
 /* YouTube button */
