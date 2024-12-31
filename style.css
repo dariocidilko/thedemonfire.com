@@ -160,6 +160,18 @@
     font-weight: bold;
 }
 
+/* TikTok button */
+.tiktok {
+    background-color: rgb(84, 2, 62);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+.tiktok:hover {
+    background-color: rgb(84, 2, 62);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
 /* Apple Music button */
 .apple-music {
     background-color: rgb(204, 0, 65); 
