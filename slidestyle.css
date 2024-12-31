@@ -56,7 +56,7 @@
     transition: background-color 0.3s ease;
 }
 
-/* This is for the text inside the slides ("TheDemonFire's Events" and "TheDemonFire's Discography") */
+/* This is for the text inside the slides like for example: TheDemonFire's Events */
 .slideshow-background p.global-slide-subtext {
     padding: 20px 20px;
     color: white;
@@ -68,17 +68,4 @@
     /* Add space between the title and the buttons */
     margin-bottom: 30px;
     text-align: center;
-}
-
-/* This is for the text inside "TheDemonFire's Biography" */
-.slideshow-background p.biography-slide-subtext {
-    padding: 5px 20px;
-    color: white;
-    font-family: "Open Sans", sans-serif;
-    font-weight: normal;
-    font-size: 15px;
-    /* Reset margin so that it doesn't cause errors */
-    margin: 0; 
-    /* Add space between the title and the buttons */
-    margin-bottom: 30px; 
 }
