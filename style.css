@@ -1,197 +1,205 @@
 
-/* This is for the main image on the website */
-.image img { 
+/* This is for the customazation of the head image */
+.head-image img {
     width: 125px;
     height: 125px;
-    padding: 1%;
-    /* This is here so that the picture is a circle */
     border-radius: 50%;
+    /* This is here to center the image */
     display: block;
     margin: 0 auto; 
+    margin-bottom: -40px;
 }
 
-/* This is for the main text on the website */
-.title-text p{
-    /* This is the space between the main image and the main text */
-    margin-top: -15px; 
-    margin-bottom: 50px;
+/* This is for the customazation of the head text */
+.head-text {
+    /* This is here to center the head text */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* This is the font for the head text */
+    font-family: "Roboto", serif;
+    font-weight: 600;
+    /* This is general customazation for the head text */
+    height: 125px; 
     color: white;
     text-shadow: 0 0 10px #fff, 
-                0 0 20px #fff, 
-                0 0 30px #fff, 
-                0 0 40px #fff, 
-                0 0 50px #fff, 
-                0 0 60px #fff, 
-                0 0 70px #fff;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    /* This will ensure that the text is centered */
-    text-align: center;
+                 0 0 20px #fff, 
+                 0 0 30px #fff, 
+                 0 0 40px #fff, 
+                 0 0 50px #fff, 
+                 0 0 60px #fff, 
+                 0 0 70px #fff; 
+    margin-top: 10px; /* Adjust this value as needed for spacing */
 }
 
-/* This is for the clock that is in the bottom right corner */
-#clock {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+/* This is for the customazation of the buttons */
+.social-buttons button {
+    width: 450px;
+    height: 75px;
     color: white;
-    font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
+    margin-top: -15px;
+    cursor: pointer;
+    /* Border customazation */
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 7px;
-    border-radius: 8px;
-    border: none;
-    /* Ensure it's on top of other content */
-    z-index: 1000;
+    border-radius: 15px;
+    border-color: white;
+    /* This is the font for the text in the buttons */
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    /* This is here to center the buttons */
+    display: block;           
+    margin-left: auto;        
+    margin-right: auto;
 }
 
-/* This is the table background in slideshow two */
-.slideshow-background-table {
+/* Remove underlines that occur because of how the "a" tag has it's link style */
+.social-buttons a {
+    /* Remove the underline */
+    text-decoration: none;
+}
+.social-buttons button a {
+    color: white;
+    /* Remove underline from button text */
+    text-decoration: none;
+}
+
+/* This section is for how the buttons react when a user hovers over them */
+
+/* YouTube and YouTube Music button */
+.youtube {
+    background-color: none;
+}
+.youtube:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+}
+
+/* Spotify button */
+.spotify {
+    background-color: none;
+}
+.spotify:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+}
+
+/* Instagram button */
+.instagram {
+    background-color: none;
+}
+.instagram:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+}
+
+/* TikTok button */
+.tiktok {
+    background-color: none;
+}
+.tiktok:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+}
+
+/* Apple Music button */
+.apple-music {
+    background-color: none;
+}
+.apple-music:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+}
+
+/* Amazon button */
+.amazon {
+    background-color: none;
+}
+.amazon:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+}
+
+/* This section is for the customazation of the table */
+
+/* This is for the table background */
+.table {
     background-color: white;
-    width: 600px; 
+    width: 1000px; 
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 /* This is for the titles inside the table */
-.events-title {
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
+.table-title {
+    font-family: "Roboto", serif;
+    font-weight: 600;
     height: 35px;
     color: white;
     background-color: rgb(24, 37, 60);
 }
 
-/* This is for the table rows inside the table on "TheDemonFire's Events" */
+/* This is for the table rows inside the table */
 
 /* This is for row one in the table */
-.contents_row_one {
+.row_one {
     background-color: rgb(255, 255, 255);
     height: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: normal;
+    font-family: "Roboto", serif;
+    font-weight: 350;
     color: black;
     text-align: center;
 }
 
 /* This is for row two in the table */
-.contents_row_two {
+.row_two {
     background-color: rgb(232, 232, 232);
     height: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: normal;
+    font-family: "Roboto", serif;
+    font-weight: 350;
     color: black;
     text-align: center;
 }
 
 /* This is for row three in the table */
-.contents_row_three {
+.row_three {
     background-color: rgb(255, 255, 255);
     height: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: normal;
+    font-family: "Roboto", serif;
+    font-weight: 350;
     color: black;
     text-align: center;
 }
 
 /* This is for row four in the table */
-.contents_row_four {
+.row_four {
     background-color: rgb(232, 232, 232);
     height: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: normal;
+    font-family: "Roboto", serif;
+    font-weight: 350;
     color: black;
     text-align: center;
 }
 
 /* This is for row five in the table */
-.contents_row_five {
+.row_five {
     background-color: rgb(255, 255, 255);
     height: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: normal;
+    font-family: "Roboto", serif;
+    font-weight: 350;
     color: black;
     text-align: center;
-}
-
-/* Customize each button's color default and hover state on "TheDemonFire's Platforms" */
-
-/* YouTube button */
-.youtube {
-    background-color: rgb(227, 0, 0);
-}
-.youtube:hover {
-    background-color: rgb(227, 0, 0);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-
-/* YouTube Music button */
-.youtube-music {
-    background-color: rgb(227, 0, 0); 
-}
-.youtube-music:hover {
-    background-color: rgb(227, 0, 0);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-
-/* Spotify button */
-.spotify {
-    background-color: rgb(2, 206, 32);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-.spotify:hover {
-    background-color: rgb(2, 206, 32);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-
-/* Instagram button */
-.instagram {
-    background-color: rgb(229, 3, 169);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-.instagram:hover {
-    background-color: rgb(229, 3, 169);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-
-/* TikTok button */
-.tiktok {
-    background-color: rgb(84, 2, 62);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-.tiktok:hover {
-    background-color: rgb(84, 2, 62);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-
-/* Apple Music button */
-.apple-music {
-    background-color: rgb(204, 0, 65); 
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-.apple-music:hover {
-    background-color: rgb(153, 0, 48); 
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-}
-
-/* Amazon button */
-.amazon {
-    background-color: rgb(2, 29, 237);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold; 
-}
-.amazon:hover {
-    background-color: rgb(2, 29, 237);
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
 }
