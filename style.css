@@ -152,10 +152,10 @@
     background-color: rgb(24, 37, 60);
 }
 
-/* This is for the table rows inside the table */
+/* This is for the table rows inside of the table */
 
-/* This is for row one in the table */
-.row_one {
+/* This is for all of the white rows in the table */
+.white_row {
     background-color: rgb(255, 255, 255);
     height: 30px;
     font-family: "Roboto", serif;
@@ -164,48 +164,8 @@
     text-align: center;
 }
 
-/* This is for row two in the table */
-.row_two {
-    background-color: rgb(232, 232, 232);
-    height: 30px;
-    font-family: "Roboto", serif;
-    font-weight: 350;
-    color: black;
-    text-align: center;
-}
-
-/* This is for row three in the table */
-.row_three {
-    background-color: rgb(255, 255, 255);
-    height: 30px;
-    font-family: "Roboto", serif;
-    font-weight: 350;
-    color: black;
-    text-align: center;
-}
-
-/* This is for row four in the table */
-.row_four {
-    background-color: rgb(232, 232, 232);
-    height: 30px;
-    font-family: "Roboto", serif;
-    font-weight: 350;
-    color: black;
-    text-align: center;
-}
-
-/* This is for row five in the table */
-.row_five {
-    background-color: rgb(255, 255, 255);
-    height: 30px;
-    font-family: "Roboto", serif;
-    font-weight: 350;
-    color: black;
-    text-align: center;
-}
-
-/* This is for row six in the table */
-.row_six {
+/* This is for all of the gray rows in the table */
+.gray_row {
     background-color: rgb(232, 232, 232);
     height: 30px;
     font-family: "Roboto", serif;
