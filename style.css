@@ -205,7 +205,7 @@
 }
 
 /* This is for row six in the table */
-.row_four {
+.row_six {
     background-color: rgb(232, 232, 232);
     height: 30px;
     font-family: "Roboto", serif;
@@ -213,3 +213,4 @@
     color: black;
     text-align: center;
 }
+
