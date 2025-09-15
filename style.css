@@ -203,3 +203,13 @@
     color: black;
     text-align: center;
 }
+
+/* This is for row six in the table */
+.row_four {
+    background-color: rgb(232, 232, 232);
+    height: 30px;
+    font-family: "Roboto", serif;
+    font-weight: 350;
+    color: black;
+    text-align: center;
+}
