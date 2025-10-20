@@ -156,7 +156,7 @@
 
 /* This is for all of the white rows in the table */
 .white_row {
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     height: 30px;
     font-family: "Roboto", serif;
     font-weight: 350;
@@ -173,6 +173,7 @@
     color: black;
     text-align: center;
 }
+
 
 
 
