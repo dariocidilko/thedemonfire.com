@@ -149,7 +149,7 @@
     font-weight: 600;
     height: 35px;
     color: white;
-    background-color: rgb(24, 37, 60);
+    background-color: rgb(139, 0, 0);
 }
 
 /* This is for the table rows inside of the table */
@@ -173,4 +173,5 @@
     color: black;
     text-align: center;
 }
+
 
