@@ -1,126 +1,83 @@
 <!DOCTYPE html>
 <head>
-    <!-- This is the title for the website -->
     <title>TheDemonFire</title>
-    <!-- This is where the favicon is linked up -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- This is where the style.css file is linked up -->
-    <link rel="stylesheet" href="style.css">
-    <!-- This is here for the "Roboto" font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;350;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="static/favicon-new.ico"> <!-- This is where the favicon file will link -->
+    <link rel="stylesheet" href="style.css"> <!-- This is where the stylesheet file will link -->
 </head>
 
-<!-- This is the body of the website -->
 <body style="background-color: black;">
-    <!-- This is for the head image and text on the website -->
     <h1>
-        <!-- This is for the head image on the website -->
+        <!-- This is for the head image -->
         <div class="head-image">
-            <img src="header.jpg">
-        </div> 
-    
-        <!-- This is for the head text on the website -->
-        <div class="head-text">
-            <p><i>TheDemonFire</i></p>
+            <img src="static/head-image.jpg">
         </div>
+
+        <!-- This is for the head text-->
+        <div class="head-text">TheDemonFire</div>
     </h1>
-
-    <!-- This is for the buttons -->
     <h2>
-        <!-- This is the main container for the buttons -->
-        <div class="social-buttons">
-            <!-- This is the YouTube button -->
-            <a href="https://www.youtube.com/@TheDemonFire">
-                <button class="youtube">YouTube</button>
-            </a><br>
-
-            <!-- This is the YouTube Music button -->
-            <a href="https://music.youtube.com/channel/UCclbOEoRVSBA4jcYFKfh6fA">
-                <button class="youtube">YouTube Music</button>
-            </a><br>
-            
-            <!-- This is the Spotify button -->
-            <a href="https://open.spotify.com/artist/5WlSr320ygP7poNts98aXH">
-                <button class="spotify">Spotify</button>
-            </a><br>
-            
-            <!-- This is the Instagram button -->
-            <a href="https://www.instagram.com/thedemonfiremusic/">
-                <button class="instagram">Instagram</button>
-            </a><br>
-
-            <!-- This is the TikTok button -->
-            <a href="https://www.tiktok.com/@thedemonfiremusic">
-                <button class="tiktok">TikTok</button>
-            </a><br>
-            
-            <!-- This is the Apple Music button -->
-            <a href="https://music.apple.com/gb/artist/thedemonfire/1512609484">
-                <button class="apple-music">Apple Music</button>
-            </a><br>
-            
-            <!-- This is the Amazon button -->
-            <a href="https://music.amazon.in/artists/B088CR3JWQ/thedemonfire">
-                <button class="amazon">Amazon</button>
-            </a><br>
-        </div>
-    </h2>
-
-    <!-- This is for the table -->
-    <h3>
         <!-- This is for the table -->
         <table class="table">
-            <!-- These are the main titles of the table -->
+            <colgroup>
+                <col style="width: 250px;">  <!-- This makes the first column narrower -->
+                <col style="width: 750px;">  <!-- This makes the second column wider -->
+            </colgroup>
+
+            <!-- This is for the titles of the table -->
             <tr>
-                <th class="table-title">📻 Date</th>
-                <th class="table-title">📌 Upcoming Releases</th>
+                <th class="table-title"><b>Release Date</b></th>
+                <th class="table-title"><b>Upcoming Releases</b></th>
             </tr>
-            
-            <!-- These are the rows in the table -->
 
-            <!-- This is for row one -->
-            <tr class="white_row">
+            <!-- This is for the information inside the table -->
+            <tr class="white-rows">
                 <td>13/03/2026</td>
-                <td>I Don't Even Know</td>
+                <td>I Don't Even Know (Single)</td>
             </tr>
 
-            <!-- This is for row two -->
-            <tr class="gray_row">
+            <tr class="gray-rows">
                 <td>17/04/2026</td>
-                <td>Up</td>
+                <td>Up (Single)</td>
             </tr>
 
-            <!-- This is for row three -->
-            <tr class="white_row">
+            <tr class="white-rows">
                 <td>15/05/2026</td>
-                <td>Emergence EP</td>
+                <td>Emergence (EP)</td>
             </tr>
 
-            <!-- This is for row four -->
-            <tr class="gray_row">
+            <tr class="gray-rows">
                 <td></td>
                 <td></td>
             </tr>
 
-            <!-- This is for row five -->
-            <tr class="white_row">
+            <tr class="white-rows">
                 <td></td>
                 <td></td>
             </tr>
         </table>
+    </h2>
+    <h3>
+        <!-- This links the Font Awesome library for using icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <!-- This is for the social links -->
+        <div class="social-links">
+            <a href="https://www.youtube.com/@TheDemonFire" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            
+            <a href="https://open.spotify.com/artist/5WlSr320ygP7poNts98aXH" target="_blank">
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+
+            <a href="https://www.instagram.com/thedemonfiremusic/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://music.apple.com/gb/artist/thedemonfire/1512609484" target="_blank">
+                <i class="fa-brands fa-apple"></i>
+            </a>
+        </div>
     </h3>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
