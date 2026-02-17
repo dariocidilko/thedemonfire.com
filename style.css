@@ -1,0 +1,109 @@
+.head-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    /* This is for centering the image */
+    display: block;
+    margin: 0 auto;
+}
+
+.head-text {
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    margin-top: 20px;
+    height: 100px; 
+
+    /* This is for creating the glowing effect for the text */
+    text-shadow: 
+                0 0 10px #fff, 
+                0 0 20px #fff, 
+                0 0 30px #fff, 
+                0 0 40px #fff, 
+                0 0 50px #fff, 
+                0 0 60px #fff;
+    
+    /* This is for centering the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.table-title {
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    font-size: 22px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    background-color: rgb(24, 37, 60);
+}
+
+.white-rows {
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    font-size: 20px;
+    height: 35px;
+    color: black;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.gray-rows {
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    font-size: 20px;
+    height: 35px;
+    color: black;
+    text-align: center;
+    background-color: rgb(232, 232, 232);
+}
+
+.social-links {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 30px;
+    left: 50%;
+    gap: 50px;
+    transform: translateX(-50%);
+}
+
+.social-links a, .social-links a:visited, .social-links a:active {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    font-size: 40px;
+    text-decoration: none;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ccc;
+    transform: scale(1.15);
+}
+
+.social-links img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%) brightness(100%);
+}
+
+.social-links img {
+    width: 75px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%) brightness(70%);
+}
