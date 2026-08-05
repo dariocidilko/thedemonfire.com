@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define the language of the website -->
+
+<head>
+  <meta charset="utf-8"> <!-- Define the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Define the viewport -->
+
+  <title>Latest Releases | TheDemonFire</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Meta description for search engines -->
+  <meta name="description" content="Explore the latest releases from TheDemonFire.">
+  
+  <!-- Open Graph meta description for social media sharing -->
+  <meta property="og:description" content="Explore the latest releases from TheDemonFire.">
+
+  <!-- Open Graph meta URL for social media sharing -->
+  <meta property="og:url" content="https://www.thedemonfire.com/previous/">
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Latest Releases | TheDemonFire">
+  
+  <!-- Defines the type of content for Open Graph social media previews -->
+  <meta property="og:type" content="website">
+  
+  <!-- Preconnects to Google Fonts to improve font loading speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Loads the "Archivo" font used for the TheDemonFire wordmark / logo -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700&display=swap" rel="stylesheet">
+
+  <!-- Loads "Font Awesome" icons for social media and interface icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="topbar__mark" href="/">TheDemonFire</a> <!-- TheDemonFire wordmark linking to the homepage -->
+    
+    <!-- Navigation links to different sections of the website -->
+    <nav class="topbar__nav" aria-label="Sections">
+      <a class="navbtn" href="/upcoming/">Upcoming releases</a>
+      <a class="navbtn" href="/latest/" aria-current="page">Latest releases</a>
+    </nav>
+  </header>
+
+  <!-- Main content of the page, the latest releases header and description section -->
+  <main class="page">
+    <div class="page__head">
+      <h1 class="page__title">Latest releases</h1>
+      <p class="page__sub">These are releases that have already been released. Select any one of them to open it on Spotify.</p>
+    </div>
+
+    <div class="page__body">
+      <section class="list" data-releases="7" aria-label="Latest releases"></section> <!-- Lists the latest seven releases -->
+    </div>
+
+    <!-- Note about where to find the full catalogue of releases and accompanying videos at the bottom of the list -->
+    <p class="page__note"> The full catalogue is available on
+      <a href="https://open.spotify.com/artist/5WlSr320ygP7poNts98aXH" target="_blank" rel="noopener">Spotify</a> and
+      <a href="https://music.apple.com/gb/artist/thedemonfire/1512609484" target="_blank" rel="noopener">Apple Music</a>,
+      with the accompanying videos on
+      <a href="https://www.youtube.com/@TheDemonFire" target="_blank" rel="noopener">YouTube</a>.
+    </p>
+  </main>
+
+  <!-- Social media links for TheDemonFire, with icons and accessible labels at the bottom -->
+  <nav class="social" aria-label="Social links">
+    
+    <!-- YouTube link -->
+    <a href="https://www.youtube.com/@TheDemonFire" target="_blank" rel="noopener" aria-label="YouTube">
+      <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+    </a>
+    
+    <!-- Spotify link -->
+    <a href="https://open.spotify.com/artist/5WlSr320ygP7poNts98aXH" target="_blank" rel="noopener" aria-label="Spotify">
+      <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+    </a>
+    
+    <!-- Instagram link -->
+    <a href="https://www.instagram.com/thedemonfiremusic/" target="_blank" rel="noopener" aria-label="Instagram">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+    </a>
+
+    <!-- Apple Music link -->
+    <a href="https://music.apple.com/gb/artist/thedemonfire/1512609484" target="_blank" rel="noopener" aria-label="Apple Music">
+      <i class="fa-brands fa-apple" aria-hidden="true"></i>
+    </a>
+  </nav>
+
+  <!-- Loads the website data used for releases and other content -->
+  <script src="/data.js"></script>
+
+  <!-- Loads the JavaScript functionality for displaying latest releases -->
+  <script src="/latest-releases.js"></script>
+
+  <!-- Loads the main website JavaScript functionality -->
+  <script src="/site.js"></script>
+</body>
+</html>
