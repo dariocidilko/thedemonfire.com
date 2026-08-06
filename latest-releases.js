@@ -1,5 +1,6 @@
 
-/* --------------------------------------------------------------------------
+
+  /* ------------------------------------------------------------------------------------------------------
 
    LATEST RELEASES - Generated automatically, do not edit by hand!
 
@@ -7,23 +8,40 @@
 
    To change how many results appear on the page, edit the "data-releases" variable in "latest/index.html".
   
-   -------------------------------------------------------------------------- */
+   -------------------------------------------------------------------------------------------------------- */
 
 const LATEST = [
-   {Year: "2026", Title: "Emergence", Type: "EP", Url: "https://open.spotify.com/album/6mlD1mPtCTMr04yhLa05iz" },
-   {Year: "2026", Title: "Up", Type: "Single", Url: "https://open.spotify.com/album/3PEf758VQRAuys8EEnvkQJ" },
-   {Year: "2026", Title: "I Don't Even Know", Type: "Single", Url: "https://open.spotify.com/album/1Gcn7RWmwzdfOypv643fOy" },
-   {Year: "2026", Title: "Monster", Type: "Single", Url: "https://open.spotify.com/album/1bVG8P24va4pVrLea1un11" },
-   {Year: "2026", Title: "Lies", Type: "Single", Url: "https://open.spotify.com/album/2HBD4bL83S0mzdjDHs86JK" },
-   {Year: "2025", Title: "I'm Lost (Without You)", Type: "Single", Url: "https://open.spotify.com/album/6Ubt8J2njj7nm6Q5Hy7NiE" },
-   {Year: "2025", Title: "Vibe With Me", Type: "Single", Url: "https://open.spotify.com/album/5tDZ9k10Oe0SCAnkiykNoY" },
-   {Year: "2025", Title: "I'm Ready", Type: "Single", Url: "https://open.spotify.com/album/1bCCXPxfpGD89m6LsIGNss" },
-   {Year: "2025", Title: "Anxiety", Type: "Single", Url: "" },
-   {Year: "2025", Title: "I Get It All", Type: "Single", Url: "" },
-   {Year: "2025", Title: "Bad & Worse", Type: "Single", Url: "" },
-   {Year: "2025", Title: "Champagne", Type: "EP", Url: "https://open.spotify.com/album/3JXlRvWN7rHo5b4U9CRwwp" },
-   {Year: "2024", Title: "TheDemonFire Presents (The End Of 2024)", Type: "Album", Url: "https://open.spotify.com/album/4fAoblUaycpA2QHDfMqgg2" },
-   {Year: "2023", Title: "TheDemonFire Presents (The End Of 2023)", Type: "Album", Url: "https://open.spotify.com/album/7gql03Tbrjk8EJsa7ScSH6" },
-   {Year: "2022", Title: "Night Music (Deluxe Edition)", Type: "Album", Url: "" },
-   {Year: "2021", Title: "Overlord (Remix)", Type: "Single", Url: "https://open.spotify.com/album/38LFL73vaR9iyh2AJUA8x1" },
+{Year: "2026", Title: "Emergence", Type: "EP", Url: "https://open.spotify.com/album/6mlD1mPtCTMr04yhLa05iz" },
+{Year: "2026", Title: "Up", Type: "Single", Url: "https://open.spotify.com/album/3PEf758VQRAuys8EEnvkQJ" },
+{Year: "2026", Title: "I Don't Even Know", Type: "Single", Url: "https://open.spotify.com/album/1Gcn7RWmwzdfOypv643fOy" },
+{Year: "2026", Title: "Monster", Type: "Single", Url: "https://open.spotify.com/album/1bVG8P24va4pVrLea1un11" },
+{Year: "2026", Title: "Lies", Type: "Single", Url: "https://open.spotify.com/album/2HBD4bL83S0mzdjDHs86JK" },
+{Year: "2025", Title: "I'm Lost (Without You)", Type: "Single", Url: "https://open.spotify.com/album/6Ubt8J2njj7nm6Q5Hy7NiE" },
+{Year: "2025", Title: "Vibe With Me", Type: "Single", Url: "https://open.spotify.com/album/5tDZ9k10Oe0SCAnkiykNoY" },
+{Year: "2025", Title: "I'm Ready", Type: "Single", Url: "https://open.spotify.com/album/1bCCXPxfpGD89m6LsIGNss" },
+{Year: "2025", Title: "Bad & Worse", Type: "Single", Url: "https://open.spotify.com/album/3Q8D2zHxwlTDQGCcl5YWte" },
+{Year: "2025", Title: "Champagne", Type: "EP", Url: "https://open.spotify.com/album/3JXlRvWN7rHo5b4U9CRwwp" },
+{Year: "2025", Title: "Fire (Remix)", Type: "Single", Url: "https://open.spotify.com/album/6fWGKtw5G5YA9ZGlq5yy1Q" },
+{Year: "2025", Title: "I Get It All", Type: "Single", Url: "https://open.spotify.com/album/1HQHlDM3HJJWLAWgmAwVhA" },
+{Year: "2025", Title: "Grind", Type: "Single", Url: "https://open.spotify.com/album/5Hyq80d90XmuYjf85w5Pa8" },
+{Year: "2025", Title: "Anxiety", Type: "Single", Url: "https://open.spotify.com/album/0eaT5C8gG93D391KkqjcBp" },
+{Year: "2024", Title: "TheDemonFire Presents (The End Of 2024)", Type: "Album", Url: "https://open.spotify.com/album/4fAoblUaycpA2QHDfMqgg2" },
+{Year: "2024", Title: "I made it (Bonus Track from The End Of 2024)", Type: "Single", Url: "https://open.spotify.com/album/5tARsFTL5IjUPr0NTOWAxp" },
+{Year: "2024", Title: "Magic (Remix)", Type: "Single", Url: "https://open.spotify.com/album/0Wf7HTYUvsbmj6yHneKVNj" },
+{Year: "2024", Title: "Magic", Type: "Single", Url: "https://open.spotify.com/album/5omK1AlcbYKkmF7xoBihhD" },
+{Year: "2024", Title: "Void", Type: "Single", Url: "https://open.spotify.com/album/6JwrOoOanWYjaqqXcJYWYw" },
+{Year: "2024", Title: "I don't know", Type: "Single", Url: "https://open.spotify.com/album/0pw6QC5I6IMoIxen1ElTLL" },
+{Year: "2024", Title: "3 Wishes", Type: "Single", Url: "https://open.spotify.com/album/6gpqlBZP0ECVtAzNkUGS4G" },
+{Year: "2024", Title: "Like it or not", Type: "Single", Url: "https://open.spotify.com/album/5jj5MRNNO83uTMD8RQNf7N" },
+{Year: "2024", Title: "Prime (Remix)", Type: "Single", Url: "https://open.spotify.com/album/1W7WP78yymyGxhEemu64dW" },
+{Year: "2024", Title: "Prime", Type: "Single", Url: "https://open.spotify.com/album/3P22lXIlTGHZJQtgcoiHJo" },
+{Year: "2024", Title: "Difficulty", Type: "Single", Url: "https://open.spotify.com/album/5VZEK21989ZLVxq18SxJUh" },
+{Year: "2024", Title: "One Shot", Type: "Single", Url: "https://open.spotify.com/album/3l3jVnHu8VEQNNhqKnntJh" },
+{Year: "2023", Title: "TheDemonFire Presents (The End Of 2023)", Type: "Album", Url: "https://open.spotify.com/album/7gql03Tbrjk8EJsa7ScSH6" },
+{Year: "2023", Title: "No Love", Type: "Single", Url: "https://open.spotify.com/album/6NDvCLhbIT6rTah7nhU9NF" },
+{Year: "2023", Title: "Life", Type: "Single", Url: "https://open.spotify.com/album/4q5UN2QAfjjjXVBqKRmEys" },
+{Year: "2023", Title: "Rave", Type: "Single", Url: "https://open.spotify.com/album/0YrKzwPI2Ft56ZAj5zP6TX" },
+{Year: "2023", Title: "Fire", Type: "Single", Url: "https://open.spotify.com/album/38AqQskjOa0qJwFmcsWLyi" },
+{Year: "2023", Title: "Record (Official Audio)", Type: "Single", Url: "https://open.spotify.com/album/23DK1QosSjF9HxFHrreMet" },
+{Year: "2023", Title: "Friday", Type: "Single", Url: "https://open.spotify.com/album/00DWMaCLEDdP8mzktiAOzh" },
 ];
