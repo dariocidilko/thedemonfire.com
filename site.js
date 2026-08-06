@@ -98,7 +98,7 @@
           meta: item.Year,
           title: item.Title,
           tag: item.Type,
-          href: item.url || fallback,
+          href: item.Url || fallback,
 
           /* The list is newest first, so the first row is the latest release. */
           latest: i === 0
