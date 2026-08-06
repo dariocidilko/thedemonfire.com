@@ -246,7 +246,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
   margin-left: 0.7em;
   padding: 4px 9px;
-  border: 1px solid var(--ink-mid);
+  border: 1px solid var(--ink-dim);
   border-radius: 2px;
   font-size: clamp(9px, 0.72vw, 11px);
   letter-spacing: 0.15em;
@@ -295,29 +295,7 @@ a.item:focus-visible .item__title { text-shadow: 0 0 24px rgba(255, 255, 255, 0.
 a.item:hover .item__meta,
 a.item:hover .item__tag,
 a.item:focus-visible .item__meta,
-a.item:focus-visible .item__latest {
-  display: inline-block;
-  margin-left: 0.7em;
-  padding: 4px 9px;
-  border: 1px solid var(--ink-mid);
-  border-radius: 2px;
-  font-size: clamp(9px, 0.72vw, 11px);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  line-height: 1;
-  white-space: nowrap;
-  vertical-align: middle;
-  color: var(--ink);
-  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
-}
-
-a.item:hover .item__latest,
-a.item:focus-visible .item__latest {
-  border-color: var(--ink);
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.28);
-}
-
-.item__tag { color: var(--ink); }
+a.item:focus-visible .item__tag { color: var(--ink); }
 
 /* Additional page information and supporting links displayed below content. */
 
@@ -368,28 +346,6 @@ a.item:focus-visible .item__latest {
     grid-template-columns: minmax(0, 1fr);
     gap: 5px;
   }
-
-  .item__latest {
-    display: inline-block;
-    margin-left: 0.7em;
-    padding: 4px 9px;
-    border: 1px solid var(--ink-mid);
-    border-radius: 2px;
-    font-size: clamp(9px, 0.72vw, 11px);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    line-height: 1;
-    white-space: nowrap;
-    vertical-align: middle;
-    color: var(--ink);
-    transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
-}
-
-a.item:hover .item__latest,
-a.item:focus-visible .item__latest {
-  border-color: var(--ink);
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.28);
-}
 
 .item__tag { text-align: left; }
 
