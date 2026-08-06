@@ -36,7 +36,7 @@ async function getAlbums(token) {
 
   const out = [];
 
-  let url = `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums` + `?include_groups=album,single,compilation&market=${MARKET}&limit=50`;
+  let url = `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums` + `?include_groups=album,single,compilation&market=${MARKET}&limit=10`;
 
   /* Continue requesting pages until Spotify has returned the full catalogue. */
   while (url) {
