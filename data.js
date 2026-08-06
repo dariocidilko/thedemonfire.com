@@ -14,8 +14,8 @@
 const UPCOMING = [
   {date: "2026-09-18", title: "Pride", feat: "", note: "", url: ""},
   {date: "2026-10-09", title: "Get Paid", feat: "", note: "", url: ""},
-  {date: "2026-11-06", title: "You Don't Know Me", feat: "[REDACTED]", note: "", url: ""},
-  {date: "2026-12-25", title: "Autopilot", feat: "[REDACTED]", note: "", url: ""},
+  {date: "2026-11-06", title: "You Don't Know Me", feat: "feat. [REDACTED]", note: "", url: ""},
+  {date: "2026-12-25", title: "Autopilot", feat: "with. [REDACTED]", note: "", url: ""},
 ];
 
 // This Spotify artist page is used as a fallback link for releases that don't have a URL. It is also the account the automatic updater reads the back catalogue from.
