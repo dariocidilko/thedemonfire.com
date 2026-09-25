@@ -11,6 +11,7 @@
    -------------------------------------------------------------------------------------------------------- */
 
 const LATEST = [
+{Year: "2026", Title: "Pride", Type: "Single", Url: "https://open.spotify.com/album/5f3vZmtQ2Br5PmPRebNslo" },
 {Year: "2026", Title: "Emergence", Type: "EP", Url: "https://open.spotify.com/album/6mlD1mPtCTMr04yhLa05iz" },
 {Year: "2026", Title: "Up", Type: "Single", Url: "https://open.spotify.com/album/3PEf758VQRAuys8EEnvkQJ" },
 {Year: "2026", Title: "I Don't Even Know", Type: "Single", Url: "https://open.spotify.com/album/1Gcn7RWmwzdfOypv643fOy" },
