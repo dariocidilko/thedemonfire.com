@@ -12,7 +12,7 @@
    -------------------------------------------------------------------------- */
 
 const UPCOMING = [
-  {date: "2026-10-16", title: "You Don't Know Me", feat: "feat. Crypt", note: "", url: ""},
+  {date: "2026-10-16", title: "You Don't Know Me", feat: "feat. Crypt", note: "", url: "https://distrokid.com/hyperfollow/thedemonfire/you-dont-know-me-feat-crypt"},
   {date: "2026-11-06", title: "Get Up", feat: "", note: "", url: ""},
   {date: "2026-11-27", title: "Get Paid", feat: "", note: "", url: ""},
   {date: "2026-12-18", title: "Autopilot", feat: "with. [REDACTED]", note: "Exclusively on YouTube", url: ""},
