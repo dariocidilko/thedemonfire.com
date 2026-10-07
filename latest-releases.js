@@ -17,6 +17,7 @@ const LATEST = [
 {Year: "2026", Title: "I Don't Even Know", Type: "Single", Url: "https://open.spotify.com/album/1Gcn7RWmwzdfOypv643fOy" },
 {Year: "2026", Title: "Monster", Type: "Single", Url: "https://open.spotify.com/album/1bVG8P24va4pVrLea1un11" },
 {Year: "2026", Title: "Lies", Type: "Single", Url: "https://open.spotify.com/album/2HBD4bL83S0mzdjDHs86JK" },
+{Year: "2025", Title: "TheDemonFire Presents (The End Of 2025)", Type: "Album", Url: "https://open.spotify.com/album/62BzdZ8KuJaFv5dC9lE0CU" },
 {Year: "2025", Title: "I'm Lost (Without You)", Type: "Single", Url: "https://open.spotify.com/album/6Ubt8J2njj7nm6Q5Hy7NiE" },
 {Year: "2025", Title: "Vibe With Me", Type: "Single", Url: "https://open.spotify.com/album/5tDZ9k10Oe0SCAnkiykNoY" },
 {Year: "2025", Title: "I'm Ready", Type: "Single", Url: "https://open.spotify.com/album/1bCCXPxfpGD89m6LsIGNss" },
