@@ -12,4 +12,5 @@
 
 const LATEST = [
 {Year: "2026", Title: "You Don't Know Me", Type: "Single", Url: "https://open.spotify.com/album/10hmN6uo5ye9hXQGIAe32P" },
+{Year: "2026", Title: "Pride", Type: "Single", Url: "https://open.spotify.com/album/18V8AenEQSSzMJe7mI5YkM" },
 ];
