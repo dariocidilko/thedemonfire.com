@@ -20,14 +20,12 @@ I thought about it what I wanna' be and then asked myself (What?)
 Have I been real or did I just lie? (Did I?)
 If I could choose, what would I want?
 Infinite money or maybe the one that I'll love (Or?)
-
 Infinite time while write my rhymes (Why?)
 Cause, Imma' ticking time bomb
 You know these rhymes, they help me survive, during my loneliest times (How?)
 I used to be all alone, on my own, all the time with these rhymes
 I figured I'm good at it, I started to connect them and just write these lines
 I could not do it at first (Figure my vibe)
-
 Yet it's so simple the truth is, I do not lie
 I am a person like you, riding this musical ride
 I am no rapper that's living online (No)
@@ -56,13 +54,11 @@ Then I evolved once I picked up my pen and just wrote what I saw (But still-)
 I'm not perfect, I do not pray, maybe I should or maybe I shouldn't
 I am confused cause of all of these- (Lies)
 But I just ask, if there is a God (What?)
-
 Please forgive me for everything that does not fit in your eyes
 Lead me away from Satan's disguises
 Show me the way, I am not driving but show me the signs
 Shows me mistakes in my plans I devise, show me mistakes ahead of their time
 Thank you and please just don't let me, fail my family in life, God (Imma'-)
-
 Demon but let me arise and reach my goals of the biggest of size
 Bless my family like someone you like, me and my family until it's our time
 I'm living my life and I'll vibe 'til the ride that I'll die on (Die on)
