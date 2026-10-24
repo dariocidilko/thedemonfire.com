@@ -11,67 +11,66 @@ const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 
 /* Stop the execution if required Spotify credentials are unavailable. */
 if (!CLIENT_ID || !CLIENT_SECRET) {
-  console.error("Missing SPOTIFY_CLIENT_ID or SPOTIFY_CLIENT_SECRET.");
-  process.exit(1);
+    console.error("Missing SPOTIFY_CLIENT_ID or SPOTIFY_CLIENT_SECRET.");
+    process.exit(1);
 }
 
 /* This function requests an access token using Spotify's client credentials flow. */
 async function getToken() {
-  const res = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
-    headers: {
-      Authorization: "Basic " + Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString("base64"),
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: "grant_type=client_credentials",
-  });
+    const res = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: {
+        Authorization: "Basic " + Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString("base64"), "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "grant_type=client_credentials",
+    });
 
-  if (!res.ok) throw new Error(`Token request failed: ${res.status} ${await res.text()}`);
+    if (!res.ok) throw new Error(`Token request failed: ${res.status} ${await res.text()}`);
 
-  return (await res.json()).access_token;
+    return (await res.json()).access_token;
 }
 
 /* This function retrieves all releases from the Spotify catalogue. */
 async function getAlbums(token) {
 
-  const out = [];
+    const out = [];
 
-  let url = `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums` + `?include_groups=album,single,compilation&market=${MARKET}&limit=10`;
+    let url = `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums` + `?include_groups=album,single,compilation&market=${MARKET}&limit=10`;
 
-  /* Continue requesting pages until Spotify has returned the full catalogue. */
-  while (url) {
-    const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
+    /* Continue requesting pages until Spotify has returned the full catalogue. */
+    while (url) {
+        const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
 
-    if (!res.ok) throw new Error(`Album request failed: ${res.status} ${await res.text()}`); // Error handling for failed requests.
+        if (!res.ok) throw new Error(`Album request failed: ${res.status} ${await res.text()}`); // Error handling for failed requests.
 
-    const page = await res.json();
+        const page = await res.json();
 
-    out.push(...page.items);
-    url = page.next;
-  }
+        out.push(...page.items);
+        url = page.next;
+    }
 
-  return out;
+    return out;
 }
 
 /* This function determines the release category displayed on the website. */
 function labelFor(album) {
 
-  if (album.album_type === "compilation") return "Compilation";
-  if (album.album_type === "album") return "Album";
-  if (album.total_tracks >= 7) return "Album";
-  if (album.total_tracks >= 3) return "EP";
+    if (album.album_type === "compilation") return "Compilation";
+    if (album.album_type === "album") return "Album";
+    if (album.total_tracks >= 7) return "Album";
+    if (album.total_tracks >= 3) return "EP";
 
-  return "Single";
+    return "Single";
 }
 
 /* This function removes unnecessary catalogue labels from release titles. */
 function tidyTitle(name) {
-  return name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+    return name.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
 }
 
 /* This function safely formats text values for JavaScript output. */
 function jsString(s) {
-  return '"' + String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"';
+    return '"' + String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"';
 }
 
 const token = await getToken();
@@ -82,21 +81,21 @@ const releases = [];
 
 for (const album of albums) {
 
-  /* Prevents duplicate releases from appearing in the generated file. */
-  const key = album.name.toLowerCase();
+    /* Prevents duplicate releases from appearing in the generated file. */
+    const key = album.name.toLowerCase();
 
-  if (seen.has(key)) continue;
+    if (seen.has(key)) continue;
 
-  seen.add(key);
+    seen.add(key);
 
-  // This block will collect the data for each release and push it into the releases array.
-  releases.push({
-    date: album.release_date,        
-    year: String(album.release_date).slice(0, 4),
-    title: tidyTitle(album.name),
-    type: labelFor(album),
-    url: album.external_urls?.spotify || "",
-  });
+    // This block will collect the data for each release and push it into the releases array.
+    releases.push({
+        date: album.release_date,        
+        year: String(album.release_date).slice(0, 4),
+        title: tidyTitle(album.name),
+        type: labelFor(album),
+        url: album.external_urls?.spotify || "",
+    });
 }
 
 /* Sort the releases from newest to oldest. */
@@ -104,8 +103,8 @@ releases.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
 /* Prevent overwriting the existing file if Spotify returns no data. */
 if (!releases.length) {
-  console.error("Spotify returned no releases. No updates were made to the output file.");
-  process.exit(1);
+    console.error("Spotify returned no releases. No updates were made to the output file.");
+    process.exit(1);
 }
 
 /* Convert the release objects into JavaScript array entries. */
@@ -114,15 +113,15 @@ const rows = releases.map(r => `{Year: ${jsString(r.year)}, Title: ${jsString(r.
 /* Write the generated release catalogue to latest-releases.js. */
 writeFileSync(OUTPUT, `
 
-  /* ------------------------------------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------------------------------------
 
-   LATEST RELEASES - Generated automatically, do not edit by hand!
+    LATEST RELEASES - Generated automatically, do not edit by hand!
 
-   This is re-generated by ".github/workflows/update-releases.yml" from the Spotify page.
+    This is re-generated by ".github/workflows/update-releases.yml" from the Spotify page.
 
-   To change how many results appear on the page, edit the "data-releases" variable in "latest/index.html".
+    To change how many results appear on the page, edit the "data-releases" variable in "latest/index.html".
   
-   -------------------------------------------------------------------------------------------------------- */
+   --------------------------------------------------------------------------------------------------------- */
 
 const LATEST = [
 ${rows}
