@@ -17,5 +17,5 @@ const LYRICS = [
   "Late Night (feat. Digitz)",
   "I Get It All",
   "Fire (Remix)",
-  "Bad & Worse,
+  "Bad & Worse",
 ];
