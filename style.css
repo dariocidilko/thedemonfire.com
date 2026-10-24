@@ -306,13 +306,13 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 .page__note a { color: var(--ink); border-bottom: 1px solid var(--rule-soft); }
 .page__note a:hover { border-bottom-color: var(--ink); }
 
-/* -------------------------------------------------------------------------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------------------------------------------------------------------
 
    Lyrics
 
    This section controls the song list on the Lyrics page, and the page that displays the lyrics of a single song in the center of the screen.
 
-   ------------------------------------------------------------------------------------------------------------------------------------------- */
+   --------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Song rows have no date or year, so the title sits on the left and the optional tag on the right. */
 .item--nometa { grid-template-columns: minmax(0, 1fr) max-content; }
@@ -346,41 +346,34 @@ a.item:focus-visible .item__tag { color: var(--ink); }
   display: block;
   width: 48px;
   height: 1.5px;
+  margin: clamp(20px, 3.5vh, 32px) auto 0;
   background: var(--rule);
 }
 
 .lyrics__text {
   font-size: clamp(16px, 1.45vw, 21px);
+  line-height: 1.95;
   letter-spacing: 0.01em;
-  line-height: 1;
 }
 
-/* Keep lyric lines tightly stacked while preserving spacing between stanzas. */
+/* Each verse is one paragraph, and every line inside it is kept as a separate line, exactly as written in the .md file. */
 .lyrics__stanza {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
+  margin: 0 0 1.9em;
   overflow-wrap: break-word;
 }
 
-.lyrics__stanza:last-child {
-  margin-bottom: 0;
-}
+.lyrics__stanza:last-child { margin-bottom: 0; }
 
-/* Individual lyric lines have no additional margin or padding. */
-.lyrics__line {
-  display: block;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
+.lyrics__line { display: block; }
 
 .lyrics__text strong { font-weight: 600; }
 
 /* A heading in the .md file, such as "Chorus", is shown as a small label above its verse. */
 .lyrics__heading {
   display: block;
+  margin-bottom: 0.9em;
   font-size: 0.62em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-mid);
 }
@@ -401,6 +394,7 @@ a.item:focus-visible .item__tag { color: var(--ink); }
   display: inline-block;
   margin-top: clamp(40px, 7vh, 72px);
   font-size: clamp(10px, 0.85vw, 12px);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-mid);
   transition: color 0.3s var(--ease), text-shadow 0.3s var(--ease);
