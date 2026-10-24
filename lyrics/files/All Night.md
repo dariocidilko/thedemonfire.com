@@ -20,7 +20,6 @@ Me and you, this is just our little thrill (Just our little thrill)
 Hidin' everywhere we go and it's real (Yeah)
 When you unveil, from the top, down to the heel
 Me and you, this is just our styl
-
 When you're first down on your knees
 I don't even gotta' ask, you just know what yo' man needs
 She just wanna' ride, 'til it's bright out
@@ -60,7 +59,6 @@ Girl, you could never handle me, going all out (No)
 Flyin' across cities with protection cause I ball now (Cause I ball now)
 When in doubt, all you do is call me king and I'm back for another round
 And you're never worn out, tired or just walk out (Never)
-
 I don't know how, but I know I got the touchdown
 Hole in one, anything you might say or just toss out (Damn)
 Me and Shawty got a book of locations that we gotta' cross out
