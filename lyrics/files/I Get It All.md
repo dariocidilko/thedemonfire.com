@@ -4,6 +4,7 @@ C'mon man I get it all now (All now)
 Every time I drop, they're like oh wow (New sound)
 C'mon man I get it all now (Ball out)
 Every time I go out, they're like- (Go now)
+
 C'mon man I get it all now (All now)
 Every time I drop, they're like oh wow (New sound)
 C'mon man I get it all now (Ball out)
