@@ -21,7 +21,7 @@ Careful where you switch your lane
 Even all my lames sound better than your main's (Facts)
 Careful with your flame, you might end up getting burnt
 I hope that you pray so, no one ends up hurt
- 
+
 For the last time, talking shit behind my back (Say what)
 You know me, Imma' find my way to reel it back (What?)
 I know you, you don't know, how to deal with that (That's a fact)
@@ -31,7 +31,7 @@ Everybody in the game, I'm just their da-da
 Cross me or my name, and you will just die, die (Eyy)
 In the game, you know I don't play, say your bye, bye's
 I will have it all, money and your bank, ha-ha (Woo)
- 
+
 **Chorus:**
 C'mon man I get it all now (All now)
 Every time I drop, they're like oh wow (New sound)
@@ -74,7 +74,7 @@ C'mon man I get it all now (All now)
 Every time I drop, they're like oh wow (New sound)
 C'mon man I get it all now (Ball out)
 Everywhere I go, they're like- (Explain how)
- 
+
 **Outro:**
 Nah, nah, nah, nah, nah, nah, nah (To the left)
 Nah, nah, nah, nah, nah, nah, nah (To the right)
