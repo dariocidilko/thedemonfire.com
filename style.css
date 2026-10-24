@@ -352,24 +352,27 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 .lyrics__text {
   font-size: clamp(16px, 1.45vw, 21px);
   letter-spacing: 0.01em;
-  line-height: 1.15;
+  line-height: 1;
 }
 
-/* Keep lyric lines and stanzas tightly stacked, without default paragraph spacing. */
+/* Keep lyric lines tightly stacked while preserving spacing between stanzas. */
 .lyrics__stanza {
   margin: 0;
   padding: 0;
-  line-height: 1.15;
+  line-height: 1;
   overflow-wrap: break-word;
 }
 
-.lyrics__stanza:last-child { margin-bottom: 0; }
+.lyrics__stanza:last-child {
+  margin-bottom: 0;
+}
 
+/* Individual lyric lines have no additional margin or padding. */
 .lyrics__line {
   display: block;
   margin: 0;
   padding: 0;
-  line-height: 1.15;
+  line-height: 1;
 }
 
 .lyrics__text strong { font-weight: 600; }
