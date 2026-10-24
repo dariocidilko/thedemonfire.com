@@ -25,7 +25,6 @@ This is for the motherfuckers that don't wanna' vibe
 This is for you motherfuckers that ain't got no time (No)
 This is for the motherfuckers that don't wanna' rhyme (Whoa)
 This is for you motherfuckers that just tryna' grind (I said- I said)
-
 This is for the motherfuckers that don't wanna' vibe (Eyy)
 This is for you motherfuckers that ain't got no time (No)
 This is for the motherfuckers that don't wanna' rhyme (Eyy)
