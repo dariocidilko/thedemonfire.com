@@ -5,7 +5,7 @@ Every sound I drop, people wanna' fight that, bite that (Whoa)
 I don't understand, cause you know you like that, ride that (Yes, you do)
 Like I'm Pac-Man, you know that I'm waiting for my chance to bite back
 In this trap-rap, when I snap back, you know I would pack you up
-Like another backpack, to be Frank
+Like another backpack, to be Frank 
 This is Common Logic, rollin' like I'm Rattpack (Damn)
 This is straight up profit, but I'm all about that
 
