@@ -8,7 +8,6 @@ In this trap-rap, when I snap back, you know I would pack you up
 Like another backpack, to be Frank 
 This is Common Logic, rollin' like I'm Rattpack (Damn)
 This is straight up profit, but I'm all about that
-
 Everybody here feel alive, don't you ever doubt that (Never)
 We are on another rhyme, you don't know nun' about that
 On another grind, whole another time (Whole another time)
@@ -25,7 +24,6 @@ This is for the motherfuckers that don't wanna' vibe
 This is for you motherfuckers that ain't got no time (No)
 This is for the motherfuckers that don't wanna' rhyme (Whoa)
 This is for you motherfuckers that just tryna' grind (I said- I said)
-
 This is for the motherfuckers that don't wanna' vibe (Eyy)
 This is for you motherfuckers that ain't got no time (No)
 This is for the motherfuckers that don't wanna' rhyme (Eyy)
@@ -47,7 +45,6 @@ Nah man, swinging swords like my name is Konan
 Oh man, melting rappers like they're just a snowman
 Olav, but both me and you know that this flow goes in
 Frozen, if you're in the stands, in the stands (Yeah)
-
 If you're in the stands, every man, grab a girl's hand (Do it)
 All you need to do, is flash a couple bands, yeah in front of them
 If you're in the stands, every girl, don't you choose the man, chose the bands (Do it now)
@@ -62,7 +59,6 @@ This is for the motherfuckers that don't wanna' vibe
 This is for you motherfuckers that ain't got no time (No)
 This is for the motherfuckers that don't wanna' rhyme (Whoa)
 This is for you motherfuckers that just tryna' grind (I said- I said)
-
 This is for the motherfuckers that don't wanna' vibe (Eyy)
 This is for you motherfuckers that ain't got no time (No)
 This is for the motherfuckers that don't wanna' rhyme (Eyy)
