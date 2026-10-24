@@ -40,22 +40,21 @@
   <header class="topbar">
     <a class="topbar__mark" href="/">TheDemonFire</a> <!-- TheDemonFire wordmark linking to the homepage -->
     
-    <!-- Navigation links to different sections of the website -->    
+    <!-- Navigation links to different sections of the website -->
     <nav class="topbar__nav" aria-label="Sections">
-      <a class="navbtn" href="/upcoming/" aria-current="page">Upcoming releases</a>
+      <a class="navbtn" href="/upcoming/">Upcoming releases</a>
       <a class="navbtn" href="/latest/">Latest releases</a>
-      <a class="navbtn" href="/lyrics/" aria-current="page">Lyrics</a>
+      <a class="navbtn" href="/lyrics/">Lyrics</a>
     </nav>
   </header>
 
   <!-- Main content of the page, the title and lyrics of one song. These are filled in by site.js using the song chosen in the link -->
-  <main class="page">
-    <article class="lyrics__inner"> 
-      <h1 class="lyrics__title"></h1> <!-- Displays the title of the selected song, populated dynamically by site.js -->
-      <div class="lyrics__text"></div> <!-- Displays the lyrics of the selected song, populated dynamically by site.js -->
-
-      <a class="lyrics_back" href="/lyrics/">Back to lyrics</a>
-    </article>    
+  <main class="lyrics" data-lyrics-view>
+    <article class="lyrics__inner">
+      <h1 class="lyrics__title"></h1>
+      <div class="lyrics__text"></div>
+      <a class="lyrics__back" href="/lyrics/">Back to lyrics</a>
+    </article>
   </main>
 
   <!-- Social media links for TheDemonFire, with icons and accessible labels at the bottom -->
@@ -82,7 +81,7 @@
     </a>
   </nav>
 
-  <!-- Loads the list of songs for which lyrics are available -->
+  <!-- Loads the lyrics used on the Lyrics pages -->
   <script src="/lyrics.js"></script>
 
   <!-- Loads the main website JavaScript functionality -->
