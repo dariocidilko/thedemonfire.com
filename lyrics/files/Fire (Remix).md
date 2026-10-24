@@ -24,7 +24,7 @@ The police, out here yelling "Freeze" (Freeze)
 And they wanna' seize, everyone there is
 I'm just here to stack my cheese
 My songs turn up the degrees, that's a guarantee
- 
+
 But I'm here, there, everywhere
 This gonna' hit you harder than the snare
 Hands in the air (Yeah)
@@ -54,7 +54,7 @@ Flick it, feel it, flick it, treat it
 Girl my track, just repeat it (Just repeat it)
 I got Red-Bull, let's just wing it (Let's just wing it)
 Like my Record, let's just spin it
- 
+
 One for the social life (Social Life)
 Two cause I'm so alive (So alive)
 Three cause that's a vibe (That's a vibe)
@@ -68,13 +68,13 @@ This a brand-new age of fuckin' passion, that's my flame
 Everyone is dancin' and its bat shit crazy so insane (So insane)
 Hope you get to see me live in action in this game (Eyy)
 If you're here, dance without compassion lose your fucking brain (Woo)
- 
+
 I'll be taking this track back, like it's jailed (Facts)
 I told Stone to hit this track, then he failed (Damn)
 Now I did, and I left it impaled, and I bailed
 Spending a rack until my pockets crack and unveil (Whoa)
 So come on girl drop the act and just give in to yourself (Woo)
- 
+
 **Chorus:**
 I'm just gonna' (Do me)
 Imma' keep it real like an (O.G.)
@@ -106,7 +106,7 @@ I'm just me, I don't rap for G's
 Every rapper that you know, will be K.I.D-d for sure
 Trust me, that's because of educated bars (Whoa)
 Coming in with Uni flow, and me sharp is what you'll C (Now, go)
- 
+
 I'm a Python when I slither, strike, repeat, and you don't see me (No)
 Whole I.T. you know you feel me
 Fuck the clowns and yes, I know that's all beneath me
