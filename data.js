@@ -12,9 +12,9 @@
    -------------------------------------------------------------------------- */
 
 const UPCOMING = [
-  {date: "2026-11-06", title: "Get Up", feat: "", note: "", url: ""},
-  {date: "2026-11-27", title: "Get Paid", feat: "", note: "", url: ""},
-  {date: "2026-12-18", title: "Autopilot", feat: "with. [REDACTED]", note: "Exclusively on YouTube", url: ""},
+  {date: "2026-11-06", title: "Get Paid", feat: "", note: "", url: ""},
+  {date: "2026-11-27", title: "Get Up", feat: "", note: "", url: ""},
+  {date: "2026-12-18", title: "A Message From a Fan", feat: "feat. [REDACTED]", note: "", url: ""},
   {date: "‍", title: "‍", feat: "‍", note: "‍", url: "‍"}, 
 ];
 
