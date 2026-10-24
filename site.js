@@ -74,11 +74,11 @@
   }
 
   /* Creates one link name per song, in the same order as lyrics.js. Songs sharing a title get -2, -3 and so on. */
-  function lyricSlugs(songs) {
+  function lyricSlugs(songs, fallback) {
     var used = {};
 
     return songs.map(function (song, i) {
-      var base = slugify(song.title) || ("song-" + (i + 1)); /* Titles with no usable letters fall back to a number. */
+      var base = slugify(song.title) || ((fallback || "song") + "-" + (i + 1)); /* Titles with no usable letters fall back to a number. */
       var slug = base;
       var n = 2;
 
@@ -89,15 +89,82 @@
     });
   }
 
-  /* Turns the entries written in lyrics.js into songs. An entry is either a plain name such as "Pride", or an object such as
-     { title: "Who Am I?", file: "Who Am I" } when the file name needs to differ from the title. */
-  function readSongs() {
-    var list = (typeof LYRICS !== "undefined") ? LYRICS : [];
+  /* Reads one line of lyrics.js. A line looks like "Song name, False, Single" and has three parts:
+     1. The name of the song, or of the EP.
+     2. True if this is an EP (a group of songs), False if it is a single song. This part may be left out for songs inside an EP.
+     3. A label of your own choice, such as Single, EP or LP, which is shown on the right of the row. This part is optional.
+     The line is read from the right, so a song name is allowed to contain commas. An entry written as an object, such as
+     { title: "Who Am I?", file: "Who Am I" }, is also understood, and can use "nested" and "type" for parts 2 and 3. */
+  function parseEntry(entry) {
+    if (typeof entry !== "string") {
+      entry = entry || {};
 
-    return list.map(function (entry) {
-      if (typeof entry === "string") return { title: entry.trim(), file: entry.trim() };
-      return { title: String(entry.title || "").trim(), file: String(entry.file || entry.title || "").trim() };
-    }).filter(function (song) { return song.title; });
+      return {
+        title: String(entry.title || "").trim(),
+        file: String(entry.file || entry.title || "").trim(),
+        flag: (typeof entry.nested === "boolean") ? entry.nested : null,
+        type: String(entry.type || "").trim()
+      };
+    }
+
+    var parts = entry.split(",");
+
+    /* Look for the True or False part, starting from the right. */
+    for (var i = parts.length - 1; i >= 1; i--) {
+      var word = parts[i].trim().toLowerCase();
+
+      if (word === "true" || word === "false") {
+        var title = parts.slice(0, i).join(",").trim();
+        return { title: title, file: title, flag: word === "true", type: parts.slice(i + 1).join(",").trim() };
+      }
+    }
+
+    return { title: entry.trim(), file: entry.trim(), flag: null, type: "" };
+  }
+
+  /* Turns all the lines of lyrics.js into the list shown on the Lyrics page.
+     - "items" is the main list, in order. Each item is either a song or an EP.
+     - "songs" is every song, including the songs inside EPs, and "groups" is every EP.
+     A line marked True starts an EP. Every line below it that has no True or False is a song inside that EP. The EP ends at the
+     next line that has True or False. Lines with no True or False that are not under an EP are normal songs. */
+  function readLyrics() {
+    var list = (typeof LYRICS !== "undefined") ? LYRICS : [];
+    var items = [];
+    var songs = [];
+    var groups = [];
+    var open = null;
+
+    list.forEach(function (entry) {
+      var e = parseEntry(entry);
+      if (!e.title) return;
+
+      /* A line without True or False, directly under an EP, is a song inside that EP. */
+      if (e.flag === null && open) {
+        var inner = { title: e.title, file: e.file, type: "", parent: open };
+        open.songs.push(inner);
+        songs.push(inner);
+        return;
+      }
+
+      open = null;
+
+      if (e.flag === true) {
+        var group = { title: e.title, type: e.type, songs: [], isGroup: true };
+        items.push(group);
+        groups.push(group);
+        open = group;
+      } else {
+        var song = { title: e.title, file: e.file, type: e.type, parent: null };
+        items.push(song);
+        songs.push(song);
+      }
+    });
+
+    /* Give every song and every EP its own link name. */
+    lyricSlugs(songs, "song").forEach(function (slug, i) { songs[i].slug = slug; });
+    lyricSlugs(groups, "collection").forEach(function (slug, i) { groups[i].slug = slug; });
+
+    return { items: items, songs: songs, groups: groups };
   }
 
   /* The addresses where the lyrics file of a song may be. Only .md files are ever requested. The exact name is tried first,
@@ -270,26 +337,58 @@
       });
     }
 
-    /* The songs listed in lyrics.js. If that file is missing or contains a mistake, this safely falls back to an empty list. */
-    var songs = readSongs();
-    var slugs = lyricSlugs(songs);
+    /* The songs and EPs listed in lyrics.js. If that file is missing or contains a mistake, this safely falls back to an empty list. */
+    var lyrics = readLyrics();
+    var songs = lyrics.songs;
     var loading = null; /* Set while the lyrics of a song are downloading, so the page is only shown once they have arrived. */
 
-    /* Generate the list of songs on the Lyrics page. Each row links to the page that displays that song's lyrics. */
+    /* Generate the list on the Lyrics page. A song links to its lyrics, and an EP links to a page listing the songs inside it. */
     var lyricList = document.querySelector("[data-lyrics-list]");
 
     if (lyricList) {
-      if (!songs.length) {
+      var shownItems = lyrics.items;
+      var wantedGroup = new URLSearchParams(window.location.search).get("c"); /* "?c=" in the link means a single EP is being opened. */
+      var emptyMessage = "No lyrics have been added yet.";
+
+      if (wantedGroup !== null) {
+        var group = lyrics.groups.filter(function (g) { return g.slug === wantedGroup; })[0];
+        var pageTitle = document.querySelector(".page__title");
+
+        pageTitle.className += " page__title--wrap"; /* Long EP names are allowed to continue on a second line. */
+
+        if (group) {
+          pageTitle.textContent = group.title;
+          document.title = "TheDemonFire | " + group.title + " (Lyrics)";
+          shownItems = group.songs;
+          emptyMessage = "No songs have been added to this EP yet.";
+        } else {
+          /* The link does not match any EP, for example a mistyped address or an EP that was removed. */
+          pageTitle.textContent = "Lyrics not found";
+          document.title = "TheDemonFire | Lyrics not found";
+          shownItems = [];
+          emptyMessage = "This EP is not in the list.";
+        }
+
+        /* A way back to the full list of lyrics, placed below the songs. */
+        var back = document.createElement("a");
+        back.className = "lyrics__back";
+        back.href = "/lyrics/";
+        back.textContent = "Back to lyrics";
+        lyricList.parentNode.appendChild(back);
+      }
+
+      if (!shownItems.length) {
         var none = document.createElement("p");
         none.className = "page__note";
-        none.textContent = "No lyrics have been added yet.";
+        none.textContent = emptyMessage;
         lyricList.appendChild(none);
       }
 
-      songs.forEach(function (song, i) {
+      shownItems.forEach(function (item, i) {
         lyricList.appendChild(buildRow({
-          title: song.title,
-          href: "/lyrics/song/?s=" + encodeURIComponent(slugs[i]),
+          title: item.title,
+          tag: item.type, /* The label written in lyrics.js, for example Single, EP or LP. */
+          href: item.isGroup ? "/lyrics/?c=" + encodeURIComponent(item.slug) : "/lyrics/song/?s=" + encodeURIComponent(item.slug),
           noMeta: true
         }, i));
       });
@@ -301,7 +400,7 @@
     if (lyricView) {
       var heading = lyricView.querySelector(".lyrics__title");
       var body = lyricView.querySelector(".lyrics__text");
-      var found = slugs.indexOf(new URLSearchParams(window.location.search).get("s"));
+      var found = songs.map(function (song) { return song.slug; }).indexOf(new URLSearchParams(window.location.search).get("s"));
 
       /* Shows a short message in place of the lyrics. */
       var notice = function (message) {
@@ -319,6 +418,13 @@
       } else {
         heading.textContent = songs[found].title;
         document.title = "TheDemonFire | " + songs[found].title + " (Lyrics)";
+
+        /* A song that is inside an EP leads back to that EP instead of the full list. */
+        if (songs[found].parent) {
+          var backLink = lyricView.querySelector(".lyrics__back");
+          backLink.href = "/lyrics/?c=" + encodeURIComponent(songs[found].parent.slug);
+          backLink.textContent = "Back to " + songs[found].parent.title;
+        }
 
         /* Download the .md file of this song from the lyrics folder, then show it. */
         loading = fetchLyrics(lyricFiles(songs[found])).then(function (markdown) {
