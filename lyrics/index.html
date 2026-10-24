@@ -40,24 +40,23 @@
   <header class="topbar">
     <a class="topbar__mark" href="/">TheDemonFire</a> <!-- TheDemonFire wordmark linking to the homepage -->
     
-    <!-- Navigation links to different sections of the website -->    
+    <!-- Navigation links to different sections of the website -->
     <nav class="topbar__nav" aria-label="Sections">
-      <a class="navbtn" href="/upcoming/" aria-current="page">Upcoming releases</a>
+      <a class="navbtn" href="/upcoming/">Upcoming releases</a>
       <a class="navbtn" href="/latest/">Latest releases</a>
       <a class="navbtn" href="/lyrics/" aria-current="page">Lyrics</a>
     </nav>
   </header>
 
-  <!-- Main content of the page, displays songs for which lyrics are available -->
+  <!-- Main content of the page, the lyrics header and description section -->
   <main class="page">
     <div class="page__head">
       <h1 class="page__title">Lyrics</h1>
-      <p class="page__sub">Select a song to view its lyrics.</p>
+      <p class="page__sub">Select any song to read its lyrics.</p>
     </div>
 
-    <!-- Retrieve and display all songs listed in the "lyrics.js" file -->
     <div class="page__body">
-      <section class="list" data-lyrics-list aria-label="Lyrics"></section>
+      <section class="list" data-lyrics-list aria-label="Lyrics"></section> <!-- Lists every song in lyrics.js -->
     </div>
   </main>
 
@@ -85,7 +84,7 @@
     </a>
   </nav>
 
-  <!-- Loads the list of songs for which lyrics are available -->
+  <!-- Loads the lyrics used on the Lyrics pages -->
   <script src="/lyrics.js"></script>
 
   <!-- Loads the main website JavaScript functionality -->
