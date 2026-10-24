@@ -5,7 +5,7 @@ Pick anyone but don't you diss me (Why?)
 Cause my music is in tense (Is intense) with this gen' (Power on)
 Every time I grab the pen (What?) pray and say Amen
 Otherwise I won't be seeing you again (Why?)
- 
+
 I'm still the ignitable lighter
 Ruthless and legendary writer, fighter
 My enemies become or are ghost writers, liars and vipers
@@ -49,7 +49,7 @@ My stick is now hitting, she's grinning while texting she's busy
 I promise that rap I'm not quitting
 However, I'd leave out the "Darth" (Why?)
 My rhymes are insidious needs (In serious needs)
- 
+
 I know I'm no Joker but I'm bringing my Heath
 And unlike a fly, there is no day that I'd flee
 I'm hungry and looking for power
@@ -62,13 +62,13 @@ Fuck it, I'm gone, I'm feeling so liminal
 All that you're doing is only my minimal
 Fuck it it's on; my bars are so original
 They should be on YouTube Originals (Go)
- 
+
 I wonder where my cemetery now could be
 Cause every time I rap or get up on a beat
 I rap like it's my last time that I get to breathe
 So, every time I'm write I wonder if it's my last time that I'm writing on a beat
 And when will it be since I'm a demon, no-
- 
+
 **Chorus:**
 I'm a monster
 Everybody I will conquer (Pick a name)
