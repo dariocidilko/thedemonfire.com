@@ -327,7 +327,7 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 /* Automatic margins center the lyrics both ways, and let long lyrics grow downwards instead of being cut off. */
 .lyrics__inner {
   width: 100%;
-  max-width: 50rem;
+  max-width: 75rem;
   margin: auto;
   text-align: center;
 }
