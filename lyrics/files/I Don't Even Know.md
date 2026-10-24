@@ -27,7 +27,7 @@ Take my rhymes and a wine, watch the way you'll shine
 I want you to let me know, what's that on your mind girl? (C'mon)
 Sometimes I get tired of hearing about her best friend (Whoa)
 I know more about him then I do of her
- 
+
 I don't even know, no
 I don't even know (Woo)
 
@@ -79,7 +79,7 @@ Don't you tell me that you've never busted to my sound
 Girl, I know you love my style cause I see your smile
 In my ride, we can ride freaky- freaky rides (Whoa)
 I want you to be my private freaky- freaky isle (Whoa)
- 
+
 Lady, I just wanna' see you break it down now
 I just wanna' through a couple bands out now
 Shawty, I just wanna' see your ass up and down
