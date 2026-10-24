@@ -306,13 +306,13 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 .page__note a { color: var(--ink); border-bottom: 1px solid var(--rule-soft); }
 .page__note a:hover { border-bottom-color: var(--ink); }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------
+/* -------------------------------------------------------------------------------------------------------------------------------------------
 
    Lyrics
 
    This section controls the song list on the Lyrics page, and the page that displays the lyrics of a single song in the center of the screen.
 
-   --------------------------------------------------------------------------------------------------------------------------------------- */
+   ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Song rows have no date or year, so the title sits on the left and the optional tag on the right. */
 .item--nometa { grid-template-columns: minmax(0, 1fr) max-content; }
@@ -327,7 +327,7 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 /* Automatic margins center the lyrics both ways, and let long lyrics grow downwards instead of being cut off. */
 .lyrics__inner {
   width: 100%;
-  max-width: 44rem;
+  max-width: 50rem;
   margin: auto;
   text-align: center;
 }
