@@ -306,6 +306,109 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 .page__note a { color: var(--ink); border-bottom: 1px solid var(--rule-soft); }
 .page__note a:hover { border-bottom-color: var(--ink); }
 
+/* -------------------------------------------------------------------------------------------------------------------------------------------
+
+   Lyrics
+
+   This section controls the song list on the Lyrics page, and the page that displays the lyrics of a single song in the center of the screen.
+
+   ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Song rows have no date or year, so the title sits on the left and the optional tag on the right. */
+.item--nometa { grid-template-columns: minmax(0, 1fr) max-content; }
+
+/* The lyrics page fills the space between the top bar and the social icons, and centers its content within it. */
+.lyrics {
+  flex: 1;
+  display: flex;
+  padding: clamp(36px, 8vh, 84px) var(--edge);
+}
+
+/* Automatic margins center the lyrics both ways, and let long lyrics grow downwards instead of being cut off. */
+.lyrics__inner {
+  width: 100%;
+  max-width: 44rem;
+  margin: auto;
+  text-align: center;
+}
+
+.lyrics__title {
+  margin: 0 0 clamp(34px, 6vh, 58px);
+  font-size: clamp(26px, 4.2vw, 52px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* A short divider line between the title and the lyrics. */
+.lyrics__title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 1.5px;
+  background: var(--rule);
+}
+
+.lyrics__text {
+  font-size: clamp(16px, 1.45vw, 21px);
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+/* Keep lyric lines and stanzas tightly stacked, without default paragraph spacing. */
+.lyrics__stanza {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.lyrics__stanza:last-child { margin-bottom: 0; }
+
+.lyrics__line {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+}
+
+.lyrics__text strong { font-weight: 600; }
+
+/* A heading in the .md file, such as "Chorus", is shown as a small label above its verse. */
+.lyrics__heading {
+  display: block;
+  font-size: 0.62em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+}
+
+.lyrics__stanza--label { margin-bottom: 0.2em; }
+.lyrics__stanza--label .lyrics__heading { margin-bottom: 0; }
+
+/* A line of three dashes in the .md file becomes a short divider line. */
+.lyrics__divider {
+  width: 48px;
+  height: 1.5px;
+  margin: 0 auto 1.9em;
+  border: 0;
+  background: var(--rule);
+}
+
+.lyrics__back {
+  display: inline-block;
+  margin-top: clamp(40px, 7vh, 72px);
+  font-size: clamp(10px, 0.85vw, 12px);
+  text-transform: uppercase;
+  color: var(--ink-mid);
+  transition: color 0.3s var(--ease), text-shadow 0.3s var(--ease);
+}
+
+.lyrics__back:hover,
+.lyrics__back:focus-visible {
+  color: var(--ink);
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+}
+
 /* --------------------------------------------------------------------------------------------------------------------------------
 
    Page load animations
@@ -316,6 +419,7 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 
 .js .item__rule { transform: scaleX(0); }
 .js .item > *:not(.item__rule) { opacity: 0; }
+.js .lyrics__inner { opacity: 0; }
 
 .drawn .item__rule {
   transform: scaleX(1);
@@ -325,6 +429,11 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 .drawn .item > *:not(.item__rule) {
   opacity: 1;
   transition: opacity 0.6s ease var(--delay, 0s), text-shadow 0.4s var(--ease);
+}
+
+.drawn .lyrics__inner {
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 
 /* -----------------------------------------------------------------------------------------------------------------------------------
@@ -350,9 +459,20 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 
   .topbar { flex-wrap: wrap; gap: 14px; }
   .topbar__nav { width: 100%; }
-  .navbtn { flex: 1; text-align: center; padding: 11px 8px; }
+  .navbtn { flex: 1 1 auto; text-align: center; padding: 11px 8px; }
   .topbar--right { justify-content: center; }
 
+}
+
+/* Three navigation buttons need more room than most phones have, so the spacing is tightened on narrow screens to keep them on one row. */
+@media (max-width: 480px) {
+  .topbar__nav { gap: 6px; }
+  .navbtn { padding: 11px 4px; letter-spacing: 0.07em; }
+}
+
+/* Very small phones, for example 320px wide, also get slightly smaller text on the navigation buttons. */
+@media (max-width: 340px) {
+  .navbtn { font-size: 9px; letter-spacing: 0.04em; }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------
@@ -367,6 +487,7 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 
   .js .item__rule { transform: scaleX(1); }
   .js .item > *:not(.item__rule) { opacity: 1; }
+  .js .lyrics__inner { opacity: 1; }
   
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
