@@ -95,7 +95,7 @@ Just a little whirl for me maybe? (C'mon)
 Make my world turn cause all I want is U, lady (You lady)
 In return, I could make you hurl, ready?
 Wanna' dance with me?
- 
+
 She said, she just wanna' feel a vibe, her and I (Her and I)
 I replied, "Imma' make you feel alive, like you're mine"
 Nothing deep but, once you're in my ride (In my ride)
@@ -107,7 +107,7 @@ It will clear yo' mind, if you whine
 When you're sittin' chillin' on my shrine (Eyy)
 When we set this track, in the back, on incline (Eyy)
 Would like to see the plaque, in the back, that is mine? (Eyy)
- 
+
 After yet another short night in the evening (Evening)
 In the northlight that is creeping (Creeping)
 After we've been steaming and scheming (Steaming and scheming)
@@ -122,7 +122,7 @@ Here we go, love
 This is how I flow now (Eyy)
 Here we go, hun'
 This is how I've flown out
- 
+
 Here we go, love
 This is how I go now
 Here we go, hun'
