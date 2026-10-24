@@ -4,7 +4,6 @@ Baby, you're bad and I'm worse (Bad and I'm worse)
 I don't think anyone's leaving our hearse (Nope)
 Baby, you're bad and I'm worse (Bad and I'm worse)
 Baby you're bad and I'm worse (Whoa)
-
 Baby, you're bad and I'm worse (Bad and I'm worse)
 I don't think anyone's feeling our verse (So, fuck 'em)
 Baby, you're bad and I'm worse (Bad and I'm worse)
@@ -17,7 +16,6 @@ Cause, I am pure blackness, the void, the darkness, destroyed (Our enemies)
 Once we come through, Satan would leave cause it's on (It's on)
 We are the baddest on land or the sea and in hell or above
 Together, two fire signs looking across, enemies gone
-
 Baby, it just keeps turning me on when we win
 You know I'm yours (Well, of course), and I know you're mine
 Put your head on my shoulder and rest while I drive (You're safe)
@@ -30,7 +28,6 @@ Baby, you're bad and I'm worse (Bad and I'm worse)
 I don't think anyone's leaving our hearse (Nope)
 Baby, you're bad and I'm worse (Bad and I'm worse)
 Baby you're bad and I'm worse (Whoa)
-
 Baby, you're bad and I'm worse (Bad and I'm worse)
 I don't think anyone's feeling our verse (So, fuck 'em)
 Baby, you're bad and I'm worse (Bad and I'm worse)
@@ -45,11 +42,9 @@ Staying inside, you know I love you, you know me for me
 The human and demon both showing
 I see you want me (How?), baby you're glowing
 Don't try and deny it, see you eye balling- (Ouch)
- 
 Why did you punch me, I'm trolling, you tease?
 C'mon now why the eye rolling cause like an M.C?
 I'm loving the feeling, you're on me (Don't stop)
-
 Tell me, I'll flip you around, bound
 Pinning around (Wow), screaming out loud (Wow)
 Kiss me, hug me, wrap up your legs, around-
