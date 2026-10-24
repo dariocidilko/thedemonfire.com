@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define the language of the website -->
+
+<head>
+  <meta charset="utf-8"> <!-- Define the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Define the viewport -->
+
+  <title>TheDemonFire | Lyrics</title>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Meta description for search engines -->
+  <meta name="description" content="Discover upcoming releases from TheDemonFire, featuring planned projects and official release dates.">
+  
+  <!-- Open Graph meta description for social media sharing -->
+  <meta property="og:description" content="Discover upcoming releases from TheDemonFire, featuring planned projects and official release dates.">
+
+  <!-- Open Graph meta URL for social media sharing -->
+  <meta property="og:url" content="https://www.thedemonfire.com/upcoming/">
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="TheDemonFire | Upcoming Releases">
+  
+  <!-- Defines the type of content for Open Graph social media previews -->
+  <meta property="og:type" content="website">
+  
+  <!-- Preconnects to Google Fonts to improve font loading speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Loads the "Archivo" font used for the TheDemonFire wordmark / logo -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700&display=swap" rel="stylesheet">
+
+  <!-- Loads "Font Awesome" icons for social media and interface icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="topbar__mark" href="/">TheDemonFire</a> <!-- TheDemonFire wordmark linking to the homepage -->
+    
+    <!-- Navigation links to different sections of the website -->    
+    <nav class="topbar__nav" aria-label="Sections">
+      <a class="navbtn" href="/upcoming/" aria-current="page">Upcoming releases</a>
+      <a class="navbtn" href="/latest/">Latest releases</a>
+      <a class="navbtn" href="/lyrics/" aria-current="page">Lyrics</a>
+    </nav>
+  </header>
+
+  <!-- Main content of the page, displays songs for which lyrics are available -->
+  <main class="page">
+    <div class="page__head">
+      <h1 class="page__title">Lyrics</h1>
+      <p class="page__sub">Select any song to view its lyrics.</p>
+    </div>
+
+    <!-- Retrieve and display all songs listed in the "lyrics.js" file -->
+    <div class="page__body">
+      <section class="list" data-lyrics-list aria-label="Lyrics"></section>
+    </div>
+  </main>
+
+  <!-- Social media links for TheDemonFire, with icons and accessible labels at the bottom -->
+  <nav class="social" aria-label="Social links">
+    
+    <!-- YouTube link -->
+    <a href="https://www.youtube.com/@TheDemonFire" target="_blank" rel="noopener" aria-label="YouTube">
+      <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+    </a>
+    
+    <!-- Spotify link -->
+    <a href="https://open.spotify.com/artist/5WlSr320ygP7poNts98aXH" target="_blank" rel="noopener" aria-label="Spotify">
+      <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+    </a>
+    
+    <!-- Instagram link -->
+    <a href="https://www.instagram.com/thedemonfiremusic/" target="_blank" rel="noopener" aria-label="Instagram">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+    </a>
+
+    <!-- Apple Music link -->
+    <a href="https://music.apple.com/gb/artist/thedemonfire/1512609484" target="_blank" rel="noopener" aria-label="Apple Music">
+      <i class="fa-brands fa-apple" aria-hidden="true"></i>
+    </a>
+  </nav>
+
+  <!-- Loads the list of songs for which lyrics are available -->
+  <script src="/lyrics.js"></script>
+
+  <!-- Loads the main website JavaScript functionality -->
+  <script src="/site.js"></script>
+</body>
+</html>
