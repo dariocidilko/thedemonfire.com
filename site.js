@@ -33,7 +33,7 @@
   function buildRow(opts, index) {
     var row = document.createElement(opts.href ? "a" : "div");
 
-    row.className = "item";
+    row.className = opts.noMeta ? "item item--nometa" : "item"; /* Lyrics rows have no date or year, so they use a two column layout. */
 
     /* Adds link behaviour when a release URL is available. */
     if (opts.href) {
@@ -51,7 +51,7 @@
 
     /* This will build the HTML structure for the release row. */
     row.innerHTML =
-      '<span class="item__meta">' + esc(opts.meta) + "</span>" +
+      (opts.noMeta ? "" : '<span class="item__meta">' + esc(opts.meta) + "</span>") +
       '<span class="item__title">' + esc(opts.title) +
         (opts.sub ? " <em>" + esc(opts.sub) + "</em>" : "") +
         (opts.latest ? ' <span class="item__latest">Latest release</span>' : "") +
@@ -60,6 +60,170 @@
       '<span class="item__rule"></span>';
 
     return row;
+  }
+
+  /* Turns a song title into a safe link name, for example "I'm Lost (Without You)" becomes "im-lost-without-you". */
+  function slugify(text) {
+    return String(text)
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "") /* Removes accents, so "é" becomes "e". */
+      .toLowerCase()
+      .replace(/['\u2019`]/g, "")                         /* Removes apostrophes instead of turning them into dashes. */
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9]+/g, "-")                        /* Any other run of symbols or spaces becomes a single dash. */
+      .replace(/^-+|-+$/g, "");
+  }
+
+  /* Creates one link name per song, in the same order as lyrics.js. Songs sharing a title get -2, -3 and so on. */
+  function lyricSlugs(songs) {
+    var used = {};
+
+    return songs.map(function (song, i) {
+      var base = slugify(song.title) || ("song-" + (i + 1)); /* Titles with no usable letters fall back to a number. */
+      var slug = base;
+      var n = 2;
+
+      while (used[slug]) { slug = base + "-" + n; n++; }
+
+      used[slug] = true;
+      return slug;
+    });
+  }
+
+  /* Turns the entries written in lyrics.js into songs. An entry is either a plain name such as "Pride", or an object such as
+     { title: "Who Am I?", file: "Who Am I" } when the file name needs to differ from the title. */
+  function readSongs() {
+    var list = (typeof LYRICS !== "undefined") ? LYRICS : [];
+
+    return list.map(function (entry) {
+      if (typeof entry === "string") return { title: entry.trim(), file: entry.trim() };
+      return { title: String(entry.title || "").trim(), file: String(entry.file || entry.title || "").trim() };
+    }).filter(function (song) { return song.title; });
+  }
+
+  /* The addresses where the lyrics file of a song may be. Only .md files are ever requested. The exact name is tried first,
+     then an all lowercase version, because GitHub treats Pride.md and pride.md as different files while Windows does not. */
+  function lyricFiles(song) {
+    var folder = (typeof LYRICS_FOLDER !== "undefined" ? LYRICS_FOLDER : "/lyrics/files/").replace(/\/*$/, "/");
+    var name = song.file.replace(/\.md$/i, "");
+    var files = [folder + encodeURIComponent(name) + ".md"];
+
+    if (name !== name.toLowerCase()) files.push(folder + encodeURIComponent(name.toLowerCase()) + ".md");
+
+    return files;
+  }
+
+  /* Downloads the first of the given files that exists, and gives back its text. Gives back null when none of them exist.
+     A page that is not a real file (for example an error page returned with a normal status) is treated as missing. */
+  function fetchLyrics(files) {
+    var i = 0;
+
+    function next() {
+      if (i >= files.length) {
+        console.warn("Lyrics file not found. Looked for: " + files.join(" and "));
+        return Promise.resolve(null);
+      }
+
+      return fetch(files[i++], { cache: "no-cache" }).then(function (res) {
+        if (!res.ok || /text\/html/i.test(res.headers.get("content-type") || "")) return next();
+        return res.text();
+      }, next);
+    }
+
+    return next();
+  }
+
+  /* Reads the bold and italic marks within one line of lyrics and gives back the finished text. Text is always inserted as plain
+     text, never as code, so characters such as < and & appear exactly as written. A * or _ with a space next to it, as in
+     "f***", is left alone. */
+  function formatLine(text) {
+    var frag = document.createDocumentFragment();
+    var mark = /\*\*\*([^\s*](?:.*?[^\s*])?)\*\*\*|\*\*([^\s*](?:.*?[^\s*])?)\*\*|__([^\s_](?:.*?[^\s_])?)__|\*([^\s*](?:.*?[^\s*])?)\*|_([^\s_](?:.*?[^\s_])?)_/g;
+    var last = 0;
+    var m;
+
+    while ((m = mark.exec(text)) !== null) {
+      var underscore = m[3] !== undefined || m[5] !== undefined;
+
+      /* An underscore inside a word, as in snake_case, is not italic. */
+      if (underscore && (/\w/.test(text.charAt(m.index - 1)) || /\w/.test(text.charAt(m.index + m[0].length)))) continue;
+
+      var inner = m[1] || m[2] || m[3] || m[4] || m[5];
+      var el = document.createElement(m[1] !== undefined || m[2] !== undefined || m[3] !== undefined ? "strong" : "em");
+
+      /* Three marks, as in ***word***, means bold and italic together. */
+      if (m[1] !== undefined) {
+        var both = document.createElement("em");
+        both.appendChild(formatLine(inner));
+        el.appendChild(both);
+      } else {
+        el.appendChild(formatLine(inner));
+      }
+
+      frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      frag.appendChild(el);
+      last = m.index + m[0].length;
+    }
+
+    frag.appendChild(document.createTextNode(text.slice(last)));
+    return frag;
+  }
+
+  /* Turns the text of a .md lyrics file into the verses shown on the page.
+     - An empty line starts a new verse, and every new line stays a new line.
+     - # headings become small labels such as "Chorus". A first heading that repeats the song title is left out.
+     - **bold**, *italic* and a --- divider are supported, and a settings block at the very top of the file is ignored. */
+  function renderLyrics(container, markdown, title) {
+    var text = String(markdown)
+      .replace(/^\uFEFF/, "")
+      .replace(/\r\n?/g, "\n")
+      .replace(/^---[ \t]*\n[\s\S]*?\n---[ \t]*(\n|$)/, "")
+      .replace(/<br\s*\/?>/gi, "\n")
+      .trim();
+
+    var heading = /^ {0,3}#{1,6}[ \t]+(.*)$/;
+    var divider = /^ {0,3}([-*_])([ \t]*\1){2,}[ \t]*$/;
+    var plain = function (s) { return s.replace(/[*_`]/g, "").trim().toLowerCase(); };
+    var count = 0;
+
+    text.split(/\n[ \t]*\n/).forEach(function (block, index) {
+      var lines = block.split("\n").map(function (line) { return line.trim(); }).filter(Boolean);
+      if (!lines.length) return;
+
+      /* A lone line of dashes is a divider. */
+      if (lines.length === 1 && divider.test(lines[0])) {
+        var hr = document.createElement("hr");
+        hr.className = "lyrics__divider";
+        container.appendChild(hr);
+        count++;
+        return;
+      }
+
+      /* The first heading is skipped when it only repeats the title, which is already shown above the lyrics. */
+      if (index === 0 && lines.length === 1 && heading.test(lines[0]) && plain(heading.exec(lines[0])[1]) === plain(title)) return;
+
+      var p = document.createElement("p");
+      var onlyLabels = true;
+
+      p.className = "lyrics__stanza";
+
+      lines.forEach(function (line) {
+        var h = heading.exec(line);
+        var span = document.createElement("span");
+
+        span.className = h ? "lyrics__heading" : "lyrics__line";
+        span.appendChild(formatLine(h ? h[1].trim() : line));
+        p.appendChild(span);
+        if (!h) onlyLabels = false;
+      });
+
+      /* A heading on its own sits close above the verse that follows it. */
+      if (onlyLabels) p.className += " lyrics__stanza--label";
+
+      container.appendChild(p);
+      count++;
+    });
+
+    return count;
   }
 
   /* This initializes the page builder and populates release lists from the data.js file. */
@@ -106,10 +270,79 @@
       });
     }
 
-    /* Start the release row animations after the page has rendered. */
-    requestAnimationFrame(function () {
-      document.body.classList.add("drawn");
-    });
+    /* The songs listed in lyrics.js. If that file is missing or contains a mistake, this safely falls back to an empty list. */
+    var songs = readSongs();
+    var slugs = lyricSlugs(songs);
+    var loading = null; /* Set while the lyrics of a song are downloading, so the page is only shown once they have arrived. */
+
+    /* Generate the list of songs on the Lyrics page. Each row links to the page that displays that song's lyrics. */
+    var lyricList = document.querySelector("[data-lyrics-list]");
+
+    if (lyricList) {
+      if (!songs.length) {
+        var none = document.createElement("p");
+        none.className = "page__note";
+        none.textContent = "No lyrics have been added yet.";
+        lyricList.appendChild(none);
+      }
+
+      songs.forEach(function (song, i) {
+        lyricList.appendChild(buildRow({
+          title: song.title,
+          href: "/lyrics/song/?s=" + encodeURIComponent(slugs[i]),
+          noMeta: true
+        }, i));
+      });
+    }
+
+    /* Fill in the lyrics page for a single song, chosen by the "?s=" part of the link. */
+    var lyricView = document.querySelector("[data-lyrics-view]");
+
+    if (lyricView) {
+      var heading = lyricView.querySelector(".lyrics__title");
+      var body = lyricView.querySelector(".lyrics__text");
+      var found = slugs.indexOf(new URLSearchParams(window.location.search).get("s"));
+
+      /* Shows a short message in place of the lyrics. */
+      var notice = function (message) {
+        var p = document.createElement("p");
+        p.className = "lyrics__stanza";
+        p.textContent = message;
+        body.appendChild(p);
+      };
+
+      if (found === -1) {
+        /* The link does not match any song, for example a mistyped address or a song that was removed. */
+        heading.textContent = "Lyrics not found";
+        document.title = "TheDemonFire | Lyrics not found";
+        notice("This song is not in the list.");
+      } else {
+        heading.textContent = songs[found].title;
+        document.title = "TheDemonFire | " + songs[found].title + " (Lyrics)";
+
+        /* Download the .md file of this song from the lyrics folder, then show it. */
+        loading = fetchLyrics(lyricFiles(songs[found])).then(function (markdown) {
+          if (markdown === null || !renderLyrics(body, markdown, songs[found].title)) {
+            notice("The lyrics for this song are not available yet.");
+          }
+        });
+      }
+    }
+
+    /* Start the page animations after the page has rendered. */
+    var reveal = function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add("drawn");
+      });
+    };
+
+    if (loading) {
+      /* Wait for the lyrics so the page does not jump when they arrive. The timeout makes sure a slow download can never leave the page blank. */
+      loading.then(reveal, reveal);
+      setTimeout(reveal, 3000);
+    } else {
+      reveal();
+    }
   }
 
   /* Waits for the document to load before generating the page content. */
