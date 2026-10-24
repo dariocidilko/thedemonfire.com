@@ -1,4 +1,4 @@
-Verse 1 - TheDemonFire:
+**Verse 1 - TheDemonFire:**
 I am a monster now striking these rappers anonymous, Thor, browser or lord (Tor)
 Faster than thunder, I'm lightning, a storm and stepping against me's like stepping in morgues
 I don't have casualties next to me, dragging me down or around in my zone, I'm alone (I'm alone)
@@ -24,7 +24,7 @@ Listen to me as I rip in this track
 I'll rip it attack, ain't nothing I lack
 This is no diss track so imagine you that (So-)
 
-Chorus - TheDemonFire:
+**Chorus - TheDemonFire:**
 You don't know me (No)
 Don't know me
 You don't know me (You don't)
@@ -42,7 +42,7 @@ Don't know me
 You don't even know me (And you never will)
 Don't know me
 
-Verse 2 - Crypt:
+**Verse 2 - Crypt:**
 I've been on top longer than most
 And I walk that walk so I know I can boast
 When I cut through the beat it rocks and I get paper so basically, I'm RO SHAM BO
@@ -73,7 +73,7 @@ Battle me get seen as a memento
 Always on the climb like ascendo
 And there's so many bars that went over your head it's like watching a sped get lost in a limbo
 
-Chorus - TheDemonFire:
+**Chorus - TheDemonFire:**
 You don't know me (No)
 Don't know me
 You don't know me (You don't)
@@ -91,7 +91,7 @@ Don't know me
 You don't even know me (And you never will)
 Don't know me
 
-Outro - TheDemonFire:
+**Outro - TheDemonFire:**
 You can't hold me
 Ruthless, cold, me
 You don't know me
