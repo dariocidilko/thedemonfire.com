@@ -1,31 +1,17 @@
 **Intro:**
-
 Feel the vibe
-
 Feel the vibe
-
 Feel the vibe
-
 L.N.C.
 
-
-
 **Chorus:**
-
 All we really do is just hide (Hide)
-
 All we have is really just time (Time)
-
 And we gon' go all night (Night)
-
 All you do is really just ride
-
 And we gon' go all night (Night)
-
 In the end, it is always fine (Fine)
-
 I promise it'll be alright (Alright)
-
 And we gon' go all night (Whoa)
 
 
