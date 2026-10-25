@@ -1,4 +1,5 @@
 
+
 /* ---------------------------------------------------------------------------------------------------------
 
     LATEST RELEASES - Generated automatically, do not edit by hand!
@@ -10,8 +11,11 @@
    --------------------------------------------------------------------------------------------------------- */
 
 const LATEST = [
-    {Year: "2026", Title: "You Don't Know Me", Type: "Single", Url: "https://open.spotify.com/album/10hmN6uo5ye9hXQGIAe32P" },
-    {Year: "2026", Title: "Pride", Type: "Single", Url: "https://open.spotify.com/album/18V8AenEQSSzMJe7mI5YkM" },
-    {Year: "2026", Title: "Emergence", Type: "EP", Url: "https://open.spotify.com/album/38suHkEooMn4GLSIKQWdxP" },
-    {Year: "2025", Title: "Champagne", Type: "EP", Url: "https://open.spotify.com/album/2l9cB1ZrLLbKistaN5aFAk" },
+{Year: "2026", Title: "You Don't Know Me", Type: "Single", Url: "https://open.spotify.com/album/10hmN6uo5ye9hXQGIAe32P" },
+{Year: "2026", Title: "Pride", Type: "Single", Url: "https://open.spotify.com/album/18V8AenEQSSzMJe7mI5YkM" },
+{Year: "2026", Title: "Emergence", Type: "EP", Url: "https://open.spotify.com/album/38suHkEooMn4GLSIKQWdxP" },
+{Year: "2025", Title: "Vibe With Me", Type: "Single", Url: "https://open.spotify.com/album/1fukA32lARv5wOphKRNCJj" },
+{Year: "2025", Title: "I'm Ready", Type: "Single", Url: "https://open.spotify.com/album/33fiUwtGMsg3DLots37oaM" },
+{Year: "2025", Title: "Bad & Worse", Type: "Single", Url: "https://open.spotify.com/album/5j6jdu62whn5BGvokV3HF8" },
+{Year: "2025", Title: "Champagne", Type: "EP", Url: "https://open.spotify.com/album/2l9cB1ZrLLbKistaN5aFAk" },
 ];
