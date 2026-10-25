@@ -14,6 +14,7 @@ const LYRICS = [
         "Monster",
         "Touché",
     "Vibe With Me, False, Single",
+	"I'm Ready (feat. Dirk J J vd Merwe)",
     "Bad & Worse, False, Single",
     "Champagne, True, EP",
         "Champagne (Intro)",
