@@ -18,4 +18,7 @@ const LATEST = [
 {Year: "2025", Title: "I'm Ready", Type: "Single", Url: "https://open.spotify.com/album/33fiUwtGMsg3DLots37oaM" },
 {Year: "2025", Title: "Bad & Worse", Type: "Single", Url: "https://open.spotify.com/album/5j6jdu62whn5BGvokV3HF8" },
 {Year: "2025", Title: "Champagne", Type: "EP", Url: "https://open.spotify.com/album/2l9cB1ZrLLbKistaN5aFAk" },
+{Year: "2025", Title: "Grind", Type: "Single", Url: "https://open.spotify.com/album/59B3wePPO35YOJS0nfIAwl" },
+{Year: "2024", Title: "Magic", Type: "Single", Url: "https://open.spotify.com/album/0IPGATvVSS6idmdWC3ZxNa" },
+{Year: "2024", Title: "Void", Type: "Single", Url: "https://open.spotify.com/album/6Hxdb2WzoNfDLEFG3QPluF" },
 ];
