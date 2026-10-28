@@ -354,10 +354,6 @@ a.item:focus-visible .item__tag { color: var(--ink); }
 
 /* The lyrics block is only as wide as its longest line and is centered on the page. The text inside it starts on the left, so every line begins at the same spot. */
 .lyrics__text {
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: left;
   font-size: clamp(16px, 1.45vw, 21px);
   line-height: 1.5;
   letter-spacing: 0.01em;
