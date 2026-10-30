@@ -19,8 +19,11 @@ const LATEST = [
 {Year: "2025", Title: "Bad & Worse", Type: "Single", Url: "https://open.spotify.com/album/5j6jdu62whn5BGvokV3HF8" },
 {Year: "2025", Title: "Champagne", Type: "EP", Url: "https://open.spotify.com/album/2l9cB1ZrLLbKistaN5aFAk" },
 {Year: "2025", Title: "Grind", Type: "Single", Url: "https://open.spotify.com/album/59B3wePPO35YOJS0nfIAwl" },
+{Year: "2024", Title: "TheDemonFire Presents (The End Of 2024)", Type: "Album", Url: "https://open.spotify.com/album/1lso5Mg0U2UJpFTvfs07CD" },
 {Year: "2024", Title: "Magic", Type: "Single", Url: "https://open.spotify.com/album/0IPGATvVSS6idmdWC3ZxNa" },
 {Year: "2024", Title: "Void", Type: "Single", Url: "https://open.spotify.com/album/6Hxdb2WzoNfDLEFG3QPluF" },
+{Year: "2024", Title: "3 Wishes", Type: "Single", Url: "https://open.spotify.com/album/6qw7vFjlPJA39KDhESgSfT" },
 {Year: "2024", Title: "Prime", Type: "Single", Url: "https://open.spotify.com/album/2kh3pTyY4XKWxvKuIYgKsj" },
+{Year: "2023", Title: "TheDemonFire Presents (The End Of 2023)", Type: "Album", Url: "https://open.spotify.com/album/4cv8XuhcftmJ2PcAFLEe0I" },
 {Year: "2023", Title: "No Love", Type: "Single", Url: "https://open.spotify.com/album/5Spy2PktqqoY2ZuJdkl5Ow" },
 ];
