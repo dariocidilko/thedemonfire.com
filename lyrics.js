@@ -4,6 +4,7 @@ const LYRICS_FOLDER = "/lyrics/files/";
 
 /* Add song titles to this array. Selecting a song will display its lyrics, if available. */
 const LYRICS = [
+	"Get Paid, False, Single",
 	"You Don't Know Me, False, Single",
 	"Pride, False, Single",
 	"Emergence, True, EP",
